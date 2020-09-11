@@ -1,18 +1,13 @@
-﻿@using SchoolTemplate.Database;
-@model List<Product>
-@{ ViewData["Title"] = "Home Page"; }
-
-<!DOCTYPE html>
-<html>
-
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr">
 <head>
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka%20One">
-    <link rel="stylesheet" href="~/css/site.css" type="text/css" />
-    <link rel="stylesheet" href="~/css/index.css" type="text/css" />
-    <title>Aggaveld</title>
+    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="line.css" />
+    <meta charset="utf-8">
+    <title>upcomming events</title>
 </head>
-
 <body>
     <div class="topnav">
         <img target="topnav" src="Sources/Img/logo.png" alt="aggaveld" style="width:10%;height:10%;">
@@ -30,18 +25,11 @@
         <div><a href="account.html">ACCOUNT</a></div>
 
     </nav>
-    <div class="bg"></div>
-    <div class="news">
-        <h1 target="news">LATEST NEWS</h1>
-        <p>
-            SUMMERBLAST 2020 is now confirmed! Get your tickets now at our <a href="#" style="color:white;">ticket page!</a><br><br>
-            SPRINGBREAK FESTIVAL is SOLD OUT! Tickets for SPRINGBREAK FESTIVAL 2021 will soon be for sale!
-        </p>
-        <a target="fest" href="#">
-            <h3 target="Spring">Springbreak festival</h3>
-            <h3 target="summer">Summer festival</h3><a>
-                <a href="#" class="button-news" target="news">more news</a>
+    <div class="comming">
+        <h1>Upcomming events:</h1>
+
     </div>
+
     <footer>
         <div><a target="foot" href="#">Contact us</a></div>
         <div><a target="foot" href="#">Apply</a></div>
@@ -51,5 +39,4 @@
         <div><a target="foot" href="#">Line-up</a></div>
     </footer>
 </body>
-
 </html>

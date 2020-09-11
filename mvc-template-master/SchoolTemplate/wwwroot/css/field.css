@@ -1,0 +1,21 @@
+﻿.recap {
+    font-family: 'Montserrat';
+    font-size: 200%;
+    color: white;
+    padding: 0 5% 2% 5%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Fredoka One';
+    font-size: 300%;
+    color: white;
+    padding: 5% 3% 2% 3%;
+    text-align: center;
+    text-decoration: overline;
+}
+
+.movies {
+    display: flex;
+    flex-direction: row;
+}

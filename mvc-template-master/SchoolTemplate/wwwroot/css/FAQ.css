@@ -1,0 +1,21 @@
+﻿.main {
+    font-family: 'Montserrat';
+    font-size: 200%;
+    color: white;
+}
+
+a[target="FAQ"] {
+    color: white;
+    font-family: 'Montserrat';
+    text-decoration: none;
+    margin: 20% 20% 20% 8%;
+}
+
+h1 {
+    font-family: 'Fredoka One';
+    font-size: 300%;
+    color: white;
+    padding: 5% 3% 2% 3%;
+    text-align: center;
+    text-decoration: overline;
+}
