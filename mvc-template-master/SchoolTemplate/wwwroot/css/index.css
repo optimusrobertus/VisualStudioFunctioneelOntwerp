@@ -1,6 +1,6 @@
 ﻿﻿.bg {
     height: 50%;
-    background-image: url("~/Sources/Img/aggaveld.png");
+    background-image: url("/Img/aggaveld.png");
     background-position: center;
     background-repeat: no-repeat;
     background-size: auto;
@@ -66,7 +66,7 @@ h3[target="Spring"] {
     text-align: center;
     font-family: 'Montserrat';
     font-size: 10% color: white;
-    background-image: url(~/Sources/Img/springbreak.jpg);
+    background-image: url(/Img/springbreak.jpg);
     padding: 10% 10% 2% 10%;
     background-repeat: no-repeat;
     background-position: center;
@@ -77,7 +77,7 @@ h3[target="summer"] {
     text-align: center;
     font-family: 'Montserrat';
     color: white;
-    background-image: url(~/Sources/Img/summerfest.jpg);
+    background-image: url(/Img/summerfest.jpg);
     padding: 10% 0% 2% 0%;
     background-repeat: no-repeat;
     background-position: center;
