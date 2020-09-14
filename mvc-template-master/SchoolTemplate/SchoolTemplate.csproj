@@ -11,12 +11,12 @@
 
   <ItemGroup>
     <None Include="Views\Home\FAQ.cshtml" />
-    <None Include="wwwroot\Img\aggaveld.png" />
-    <None Include="wwwroot\Img\glitch.png" />
-    <None Include="wwwroot\Img\insta.png" />
-    <None Include="wwwroot\Img\logo.png" />
-    <None Include="wwwroot\Img\springbreak.jpg" />
-    <None Include="wwwroot\Img\summerfest.jpg" />
+    <None Include="wwwroot\Sources\Img\aggaveld.png" />
+    <None Include="wwwroot\Sources\Img\glitch.png" />
+    <None Include="wwwroot\Sources\Img\insta.png" />
+    <None Include="wwwroot\Sources\Img\logo.png" />
+    <None Include="wwwroot\Sources\Img\springbreak.jpg" />
+    <None Include="wwwroot\Sources\Img\summerfest.jpg" />
   </ItemGroup>
 
 
@@ -24,11 +24,6 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.1" PrivateAssets="All" />
     <PackageReference Include="MySql.Data" Version="8.0.18" />
-  </ItemGroup>
-
-
-  <ItemGroup>
-    <Folder Include="Sources\" />
   </ItemGroup>
 
 </Project>
