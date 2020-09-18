@@ -11,25 +11,25 @@ namespace SchoolTemplate.Controllers
   public class HomeController : Controller
   {
     // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
-    string connectionString = "Server=172.16.160.21;Port=3306;Database=fastfood;Uid=110127;Pwd=taTeRpso;";
+    string connectionString = "Server=172.16.160.21;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;";
 
     public IActionResult Index()
     {
-      List<Product> products = new List<Product>();
-      // uncomment deze regel om producten uit je database toe te voegen
-      // products = GetProducts();
+      List<Festival> festivals = new List<Festival>();
+        // uncomment deze regel om producten uit je database toe te voegen
+        festivals = GetFestivals();
 
-      return View(products);
+        return View(festivals);
     }
 
-    private List<Product> GetProducts()
+    private List<Festival> GetFestivals()
     {
-      List<Product> products = new List<Product>();
+      List<Festival> products = new List<Festival>();
 
       using (MySqlConnection conn = new MySqlConnection(connectionString))
       {
         conn.Open();
-        MySqlCommand cmd = new MySqlCommand("select * from product", conn);
+        MySqlCommand cmd = new MySqlCommand("select * from festival", conn);
 
         using (var reader = cmd.ExecuteReader())
         {
@@ -37,19 +37,15 @@ namespace SchoolTemplate.Controllers
           {
             int Id = Convert.ToInt32(reader["Id"]);
             string Naam = reader["Naam"].ToString();
-            float Calorieen = float.Parse(reader["calorieen"].ToString());
-            string Formaat = reader["Formaat"].ToString();
-            int Gewicht = Convert.ToInt32(reader["Gewicht"].ToString());
-            decimal Prijs = Decimal.Parse(reader["Prijs"].ToString());
+            
 
-            Product p = new Product
+            Festival p = new Festival
             {
-              Id = Convert.ToInt32(reader["Id"]),
-              Naam = reader["Naam"].ToString(),
-              Calorieen = float.Parse(reader["calorieen"].ToString()),
-              Formaat = reader["Formaat"].ToString(),
-              Gewicht = Convert.ToInt32(reader["Gewicht"].ToString()),
-              Prijs = Decimal.Parse(reader["Prijs"].ToString())
+              Id = Id,
+              Naam = Naam,
+              Beschrijving = reader["beschrijving"].ToString(),
+              datum = DateTime.Parse(reader["datum"].ToString())
+              Img
             };
             products.Add(p);
           }

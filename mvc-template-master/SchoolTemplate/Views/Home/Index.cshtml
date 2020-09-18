@@ -1,9 +1,14 @@
 ﻿@using SchoolTemplate.Database;
-@model List<Product>
+@model List<Festival>
 @{ ViewData["Title"] = "Home Page"; }
 
     <div class="news">
-        <img class="bg" src="~/Sources/Img/aggaveld.png" />
+        @foreach (Festival f in Model)
+        {
+            <p>@f.Naam</p>
+            <img class="bg" src="@f.Img" />
+        }
+
         <h1 target="news">LATEST NEWS</h1>
         <p>
             SUMMERBLAST 2020 is now confirmed! Get your tickets now at our <a href="#" style="color:white;">ticket page!</a><br><br>
@@ -13,5 +18,5 @@
             <h3 target="Spring">Springbreak festival</h3>
             <h3 target="summer">Summer festival</h3>
         </a>
-                <a href="#" class="button-news" target="news">more news</a>
+        <a href="#" class="button-news" target="news">more news</a>
     </div> 
