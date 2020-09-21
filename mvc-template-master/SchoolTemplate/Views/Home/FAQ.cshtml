@@ -1,53 +1,17 @@
-﻿<!DOCTYPE html>
-<html lang="en" dir="ltr">
+﻿@using SchoolTemplate.Database;
+@model List<Product>
+@{ ViewData["Title"] = "Frequently Asked Questions"; }
 
-<head>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka%20One">
-    <link rel="stylesheet" href="site.css" />
-    <link rel="stylesheet" href="FAQ.css" />
-    <meta charset="utf-8">
-    <title>FAQ</title>
-</head>
 
-<body>
-    <div class="topnav">
-        <img target="topnav" src="logo.png" alt="aggaveld" style="width:10%;height:10%;">
-        <div>AGGAVELD </div>
-    </div>
-    <nav>
-        <div><a href="index.html">HOME</a></div>
-        <div><img src="Sources/Img/glitch.png"></div>
-        <div><a href="index.html">THE FIELD</a></div>
-        <div><img src="Sources/Img/glitch.png"></div>
-        <div><a href="line.html">UPCOMMING</a></div>
-        <div><img src="Sources/Img/glitch.png"></div>
-        <div><a href="FAQ.html">FAQ</a></div>
-        <div><img src="Sources/Img/glitch.png"></div>
-        <div><a href="account.html">ACCOUNT</a></div>
-
-    </nav>
-    <div class="main">
-        <h1>Frequently Asked Questions:</h1>
-        <a target="FAQ" href="#">Where can I buy my tickets?</a><br><br>
-        <a target="FAQ" href="#">Where can I sign up as an artist?</a><br><br>
-        <a target="FAQ" href="#">Are lockers available on the field?</a><br><br>
-        <a target="FAQ" href="#">Can I refund my ticket?</a><br><br>
-        <a target="FAQ" href="#">Is there a First Aid service?</a><br><br>
-        <a target="FAQ" href="#">Is there a parking lot?</a><br><br>
-        <a target="FAQ" href="#">Can I recommend artists?</a><br><br>
-        <a target="FAQ" href="#">Why can I only buy 2 tickets at the time?</a><br><br>
-        <a target="FAQ" href="#">Is there a lost and found service?</a><br><br>
-    </div>
-
-    <footer>
-        <div><a target="foot" href="#">Contact us</a></div>
-        <div><a target="foot" href="#">Apply</a></div>
-        <div><a target="foot" href="#">News</a></div>
-        <div><a target="foot" href="#">FAQ</a></div>
-        <div><a target="foot" href="#">Tickets</a></div>
-        <div><a target="foot" href="#">Line-up</a></div>
-    </footer>
-</body>
-
-</html>
+<div class="main">
+    <h1>Frequently Asked Questions:</h1>
+    <a target="FAQ" href="#">Where can I buy my tickets?</a><br><br>
+    <a target="FAQ" href="#">Where can I sign up as an artist?</a><br><br>
+    <a target="FAQ" href="#">Are lockers available on the field?</a><br><br>
+    <a target="FAQ" href="#">Can I refund my ticket?</a><br><br>
+    <a target="FAQ" href="#">Is there a First Aid service?</a><br><br>
+    <a target="FAQ" href="#">Is there a parking lot?</a><br><br>
+    <a target="FAQ" href="#">Can I recommend artists?</a><br><br>
+    <a target="FAQ" href="#">Why can I only buy 2 tickets at the time?</a><br><br>
+    <a target="FAQ" href="#">Is there a lost and found service?</a><br><br>
+</div>

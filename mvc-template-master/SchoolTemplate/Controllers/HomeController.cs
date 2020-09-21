@@ -8,62 +8,93 @@ using SchoolTemplate.Models;
 
 namespace SchoolTemplate.Controllers
 {
-  public class HomeController : Controller
-  {
-    // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
-    string connectionString = "Server=172.16.160.21;Port=3306;Database=fastfood;Uid=110127;Pwd=taTeRpso;";
-
-    public IActionResult Index()
+    public class HomeController : Controller
     {
-      List<Product> products = new List<Product>();
-      // uncomment deze regel om producten uit je database toe te voegen
-      // products = GetProducts();
+        // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
+        string connectionString = "Server=172.16.160.21;Port=3306;Database=fastfood;Uid=;Pwd=;";
 
-      return View(products);
-    }
-
-    private List<Product> GetProducts()
-    {
-      List<Product> products = new List<Product>();
-
-      using (MySqlConnection conn = new MySqlConnection(connectionString))
-      {
-        conn.Open();
-        MySqlCommand cmd = new MySqlCommand("select * from product", conn);
-
-        using (var reader = cmd.ExecuteReader())
+        [Route("index")]
+        public IActionResult Index()
         {
-          while (reader.Read())
-          {
-            int Id = Convert.ToInt32(reader["Id"]);
-            string Naam = reader["Naam"].ToString();
-            float Calorieen = float.Parse(reader["calorieen"].ToString());
-            string Formaat = reader["Formaat"].ToString();
-            int Gewicht = Convert.ToInt32(reader["Gewicht"].ToString());
-            decimal Prijs = Decimal.Parse(reader["Prijs"].ToString());
+            List<Product> products = new List<Product>();
+            // uncomment deze regel om producten uit je database toe te voegen
+            // products = GetProducts();
 
-            Product p = new Product
-            {
-              Id = Convert.ToInt32(reader["Id"]),
-              Naam = reader["Naam"].ToString(),
-              Calorieen = float.Parse(reader["calorieen"].ToString()),
-              Formaat = reader["Formaat"].ToString(),
-              Gewicht = Convert.ToInt32(reader["Gewicht"].ToString()),
-              Prijs = Decimal.Parse(reader["Prijs"].ToString())
-            };
-            products.Add(p);
-          }
+            return View(products);
         }
-      }
 
-      return products;
+        [Route("contact")]
+        public IActionResult Contact()
+        {
+            return View();
+        }
+
+        [Route("FAQ")]
+        public IActionResult FAQ()
+        {
+            return View();
+        }
+
+        [Route("account")]
+        public IActionResult Account()
+        {
+            return View();
+        }
+
+        [Route("field")]
+        public IActionResult Field()
+        {
+            return View();
+        }
+
+        [Route("line")]
+        public IActionResult Line()
+        {
+            return View();
+        }
+
+        private List<Product> GetProducts()
+        {
+            List<Product> products = new List<Product>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("select * from product", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int Id = Convert.ToInt32(reader["Id"]);
+                        string Naam = reader["Naam"].ToString();
+                        float Calorieen = float.Parse(reader["calorieen"].ToString());
+                        string Formaat = reader["Formaat"].ToString();
+                        int Gewicht = Convert.ToInt32(reader["Gewicht"].ToString());
+                        decimal Prijs = Decimal.Parse(reader["Prijs"].ToString());
+
+                        Product p = new Product
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["Naam"].ToString(),
+                            Calorieen = float.Parse(reader["calorieen"].ToString()),
+                            Formaat = reader["Formaat"].ToString(),
+                            Gewicht = Convert.ToInt32(reader["Gewicht"].ToString()),
+                            Prijs = Decimal.Parse(reader["Prijs"].ToString())
+                        };
+                        products.Add(p);
+                    }
+                }
+            }
+
+            return products;
+        }
+
+
+        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
+        public IActionResult Error()
+        {
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
-
-
-    [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-    public IActionResult Error()
-    {
-      return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-    }
-  }
 }
