@@ -8,19 +8,49 @@ using SchoolTemplate.Models;
 
 namespace SchoolTemplate.Controllers
 {
-  public class HomeController : Controller
-  {
-    // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
-    string connectionString = "Server=172.16.160.21;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;";
-
-    public IActionResult Index()
+    public class HomeController : Controller
     {
-      List<Festival> festivals = new List<Festival>();
-        // uncomment deze regel om producten uit je database toe te voegen
-        festivals = GetFestivals();
+        // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
+        string connectionString = "Server=172.16.160.21;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;";
 
-        return View(festivals);
-    }
+        public IActionResult Index()
+        {
+            List<Festival> festivals = new List<Festival>();
+            // uncomment deze regel om producten uit je database toe te voegen
+            festivals = GetFestivals();
+
+            return View(festivals);
+        }
+
+        [Route("account")]
+        public IActionResult account()
+        {
+            return View();
+        }
+
+        [Route("contact")]
+        public IActionResult contact()
+        {
+            return View();
+        }
+
+        [Route("FAQ")]
+        public IActionResult FAQ()
+        {
+            return View();
+        }
+
+        [Route("field")]
+        public IActionResult field()
+        {
+            return View();
+        }
+
+        [Route("line")]
+        public IActionResult line()
+        {
+            return View();
+        }
 
     private List<Festival> GetFestivals()
     {
@@ -44,8 +74,8 @@ namespace SchoolTemplate.Controllers
               Id = Id,
               Naam = Naam,
               Beschrijving = reader["beschrijving"].ToString(),
-              datum = DateTime.Parse(reader["datum"].ToString())
-              Img
+              datum = DateTime.Parse(reader["datum"].ToString()),
+              
             };
             products.Add(p);
           }
