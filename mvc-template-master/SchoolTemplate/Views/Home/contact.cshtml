@@ -1,3 +1,22 @@
-﻿@{ ViewData["Title"] = "Contact page"; }
+﻿@model PersonModel
+@{ ViewData["Title"] = "Contact page"; }
 
-    <h1>Contact</h1>
+<h1>Contact</h1>
+
+@if(Model != null)
+{
+    <p>
+        Your firstname is: @Model.firstname <br />
+        Your lastname is: @Model.lastname <br />
+    </p>
+}
+
+<form method="post">
+    <input type="text" name="firstname" placeholder="First name" /> <br />
+    <input type="text" name="lastname" placeholder="Last name" /> <br />
+    @Html.ValidationMessageFor(m =>  m.lastname) <br />
+    <input type="text" name="email" placeholder="E-mail" /> <br />
+    @Html.ValidationMessageFor(m => m.email) <br />
+    <input type="datetime" name="birtdate" />
+    <input type="submit" value="send" />
+</form>
