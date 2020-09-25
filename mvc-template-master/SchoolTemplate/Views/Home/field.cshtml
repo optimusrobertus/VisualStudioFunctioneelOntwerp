@@ -1,44 +1,11 @@
-﻿<!DOCTYPE html>
-<html lang="en" dir="ltr">
-<head>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka%20One">
-    <link rel="stylesheet" href="site.css" />
-    <link rel="stylesheet" href="field.css" />
-    <meta charset="utf-8">
-    <title>upcomming events</title>
-</head>
-<body>
-    <div class="topnav">
-        <img target="topnav" src="Sources/Img/logo.png" alt="aggaveld" style="width:10%;height:10%;">
-        <div>AGGAVELD </div>
-    </div>
-    <nav>
-        <div><a href="index.html">HOME</a></div>
-        <div><img src="Sources/Img/glitch.png"></div>
-        <div><a href="field.html">THE FIELD</a></div>
-        <div><img src="Sources/Img/glitch.png"></div>
-        <div><a href="line.html">UPCOMMING</a></div>
-        <div><img src="Sources/Img/glitch.png"></div>
-        <div><a href="FAQ.html">FAQ</a></div>
-        <div><img src="Sources/Img/glitch.png"></div>
-        <div><a href="account.html">ACCOUNT</a></div>
+﻿@using SchoolTemplate.Database;
+@model List<Festival>
+@{ ViewData["Title"] = "The Field"; }
 
-    </nav>
-    <div class="recap">
-        <h1>Aftermovies:</h1>
-        <video src="land.mp4" autoplay muted loop>
-        </video>
+<div class="recap">
+    <h1>Aftermovies:</h1>
+    <video src="land.mp4" autoplay muted loop>
+    </video>
 
-    </div>
+</div>
 
-    <footer>
-        <div><a target="foot" href="#">Contact us</a></div>
-        <div><a target="foot" href="#">Apply</a></div>
-        <div><a target="foot" href="#">News</a></div>
-        <div><a target="foot" href="#">FAQ</a></div>
-        <div><a target="foot" href="#">Tickets</a></div>
-        <div><a target="foot" href="#">Line-up</a></div>
-    </footer>
-</body>
-</html>
