@@ -40,6 +40,13 @@ namespace SchoolTemplate.Controllers
         [HttpPost]
         public IActionResult contact(PersonModel model)
         {
+            if (!ModelState.IsValid)
+                return View(model);
+            
+            SavePerson(model);
+
+            ViewData["formsucces"] = "ök";
+
             return View();
         }
 
@@ -74,6 +81,20 @@ namespace SchoolTemplate.Controllers
 
       return products;
     }
+
+    private void SavePerson(PersonModel person)
+        {
+            using(MySqlConnection conn= new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO customer(firstname, lastname, email, birthdate VALUES(?firstname, ?lastname, ?email, ?birthdate", conn);
+                cmd.Parameters.Add("?firstname", MySqlDbType.VarChar).Value = person.firstname;
+                cmd.Parameters.Add("?lastname", MySqlDbType.VarChar).Value = person.lastname;
+                cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = person.email;
+                cmd.Parameters.Add("?birthdate", MySqlDbType.VarChar).Value = person.birthdate;
+                cmd.ExecuteNonQuery();
+            }
+        }
 
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

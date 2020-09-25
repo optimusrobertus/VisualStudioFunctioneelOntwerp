@@ -11,6 +11,13 @@
     </p>
 }
 
+@if(ViewData["formsucces"] == "ök")
+{
+    <p>
+        We have received your question. We'll contact you as soon as possible!  
+    </p>
+}
+
 <form method="post">
     <input type="text" name="firstname" placeholder="First name" /> <br />
     <input type="text" name="lastname" placeholder="Last name" /> <br />
