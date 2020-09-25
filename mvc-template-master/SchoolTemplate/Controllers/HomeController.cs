@@ -37,15 +37,18 @@ namespace SchoolTemplate.Controllers
           {
             int Id = Convert.ToInt32(reader["Id"]);
             string Naam = reader["Naam"].ToString();
-            
+                        string Img = reader["Img"].ToString();
 
-            Festival p = new Festival
-            {
-              Id = Id,
-              Naam = Naam,
-              Beschrijving = reader["beschrijving"].ToString(),
-              datum = DateTime.Parse(reader["datum"].ToString())
-              Img
+
+
+
+                        Festival p = new Festival
+                        {
+                            Id = Id,
+                            Naam = Naam,
+                            Beschrijving = reader["beschrijving"].ToString(),
+                            datum = DateTime.Parse(reader["datum"].ToString()),
+                            Img = reader["Img"].ToString(),
             };
             products.Add(p);
           }
