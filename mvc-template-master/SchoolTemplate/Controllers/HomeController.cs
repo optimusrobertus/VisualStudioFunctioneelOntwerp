@@ -11,7 +11,7 @@ namespace SchoolTemplate.Controllers
     public class HomeController : Controller
     {
         // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
-        string connectionString = "Server=172.16.160.21;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;";
+        string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;";
 
         // [Route("Index")]
         public IActionResult Index()
@@ -35,20 +35,39 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-    
         [Route("contact")]
         [HttpPost]
         public IActionResult contact(PersonModel model)
         {
+            // No valid model? Then error
             if (!ModelState.IsValid)
                 return View(model);
             
+            // Model is valid, and can be saved
             SavePerson(model);
 
-            ViewData["formsucces"] = "ök";
+            return Redirect("/succes");
+        }
 
+        [Route("succes")]
+        public IActionResult succes()
+        {
             return View();
         }
+
+        [Route("field")]
+        public IActionResult field()
+        {
+            return View();
+        }
+
+        [Route("line")]
+        public IActionResult line()
+        {
+            return View();
+        }
+
+
 
     private List<Festival> GetFestivals()
     {
@@ -87,13 +106,14 @@ namespace SchoolTemplate.Controllers
             using(MySqlConnection conn= new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO customer(firstname, lastname, email, birthdate VALUES(?firstname, ?lastname, ?email, ?birthdate", conn);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO customer(firstname, lastname, phonenumber, email, subject) VALUES(?firstname, ?lastname, ?phonenumber, ?email, ?subject)", conn);
                 cmd.Parameters.Add("?firstname", MySqlDbType.VarChar).Value = person.firstname;
                 cmd.Parameters.Add("?lastname", MySqlDbType.VarChar).Value = person.lastname;
+                cmd.Parameters.Add("?phonenumber", MySqlDbType.VarChar).Value = person.phonenumber;
                 cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = person.email;
-                cmd.Parameters.Add("?birthdate", MySqlDbType.VarChar).Value = person.birthdate;
+                cmd.Parameters.Add("?subject", MySqlDbType.VarChar).Value = person.subject;
                 cmd.ExecuteNonQuery();
-            }
+            }   
         }
 
 
