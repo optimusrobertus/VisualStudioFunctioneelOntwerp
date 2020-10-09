@@ -1,5 +1,47 @@
-﻿@using SchoolTemplate.Database;
-@model List<Festival>
+﻿@model PersonModel
 @{ ViewData["Title"] = "Contact page"; }
 
-    <h1>Contact</h1>
+@section style{
+    <link href="/css/contact.css" type="text/css" rel="stylesheet" />
+}
+<h1>Contact</h1>
+
+@if (Model != null)
+{
+
+}
+
+@if (ViewData["formsucces"] == "ök")
+{
+    <p>
+        We have received your question. We'll contact you as soon as possible!
+    </p>
+}
+
+<div class="container">
+    <form method="post">
+
+        <label for="fname">First name</label><br />
+        @Html.ValidationMessageFor(m => m.firstname) 
+        <input type="text" id="fname" name="firstname" placeholder="Your name" /> <br />
+
+        <label for="lname">Last name</label><br />
+        @Html.ValidationMessageFor(m => m.lastname) 
+        <input type="text" id="lname" name="lastname" placeholder="Your name" /> <br />
+
+        <label for="phone">Phone number</label>
+        @Html.ValidationMessageFor(m => m.phonenumber) <br />
+        <input type="text" id="phone" name="phonenumber" placeholder="Your phone number" /><br />
+
+        <label for="email">Email address</label><br />
+        @Html.ValidationMessageFor(m => m.email)
+        <input type="text" id="email" name="email" placeholder="Your email" /> <br />
+
+        <label for="subject">What do you want to contact us about?</label><br />
+        @Html.ValidationMessageFor(m => m.subject)
+        <textarea id="subject" name="subject" placeholder="Write something"></textarea><br />
+
+        <input type="submit" value="send" />
+
+    </form>
+</div>
