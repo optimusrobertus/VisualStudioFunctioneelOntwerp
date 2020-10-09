@@ -11,7 +11,9 @@ namespace SchoolTemplate.Controllers
     public class HomeController : Controller
     {
         // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
-        string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;";
+        string connectionString = "Server=172.16.162.21;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;";
+        // server is 172.16.162.21
+        // server is informatica.st-maartenscollege.nl
 
         // [Route("Index")]
         public IActionResult Index()
