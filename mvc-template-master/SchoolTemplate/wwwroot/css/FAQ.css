@@ -1,12 +1,12 @@
 ﻿.main {
-    font-family: 'Montserrat';
+    font-family: 'Roboto', sans-serif;
     font-size: 200%;
     color: white;
 }
 
 a[target="FAQ"] {
     color: white;
-    font-family: 'Montserrat';
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     margin: 20% 20% 20% 8%;
 }

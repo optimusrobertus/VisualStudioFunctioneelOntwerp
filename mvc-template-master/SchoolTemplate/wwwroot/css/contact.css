@@ -48,6 +48,22 @@ h1 {
     color: white;
 }
 
+label {
+    font-family: 'Fredoka One';
+    color: white;
+    font-size: 20px;
+}
+
+::placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+}
+
+.error {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
 .field-validation-error {
     color: red;
 }
