@@ -7,6 +7,9 @@ h1 {
     font-family: 'Fredoka One';
     color: white;
     text-align: center;
+    text-decoration: overline;
+    font-size: 300%;
+    padding: 3% 3% 0% 2%;
 }
 
 p {
