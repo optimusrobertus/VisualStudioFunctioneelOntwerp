@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
+using Renci.SshNet.Security.Cryptography;
 using SchoolTemplate.Database;
 using SchoolTemplate.Models;
 
@@ -12,16 +13,15 @@ namespace SchoolTemplate.Controllers
     {
 
         // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
-        //string connectionString = "Server=172.16.160.21;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;"; //voor school
-        string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;"; //voor thuis
+        string connectionString = "Server=172.16.160.21;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;"; //voor school
+        // string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;"; //voor thuis
 
 
         // [Route("Index")]
         public IActionResult Index()
         {
             List<Festival> festivals = new List<Festival>();
-            // uncomment deze regel om producten uit je database toe te voegen
-            festivals = GetFestivals();
+            festivals = GetLatestFestivals();
 
             return View(festivals);
         }
@@ -70,37 +70,80 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-    private List<Festival> GetFestivals()
-    {
-      List<Festival> products = new List<Festival>();
-
-      using (MySqlConnection conn = new MySqlConnection(connectionString))
-      {
-        conn.Open();
-        MySqlCommand cmd = new MySqlCommand("select * from festival", conn);
-
-        using (var reader = cmd.ExecuteReader())
+        [Route("FAQ")]
+        public IActionResult FAQ()
         {
-          while (reader.Read())
-          {
-            int Id = Convert.ToInt32(reader["Id"]);
-            string Naam = reader["Naam"].ToString();
-            string Img = reader["Img"].ToString();
-            Festival p = new Festival
-            {
-              Id = Id,
-              Naam = Naam,
-              Beschrijving = reader["beschrijving"].ToString(),
-              datum = DateTime.Parse(reader["datum"].ToString()),
-              Img = reader["Img"].ToString(),
-            };
-            products.Add(p);
-          }
+            return View();
         }
-      }
 
-      return products;
-    }
+        [Route("festival")]
+        public IActionResult Festival()
+        {
+            return View();
+        }
+
+        [Route("festival/{id}")]
+        public IActionResult Festival(string id)
+        {
+            var model = GetFestival(id);
+
+            return View(model);
+        }
+
+        private List<Festival> GetLatestFestivals()
+        {
+            List<Festival> festivals = new List<Festival>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"select * from festival limit 3", conn);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Festival p = new Festival
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["naam"].ToString(),
+                            Beschrijving = reader["beschrijving"].ToString(),
+                            Datum = DateTime.Parse(reader["datum"].ToString()),
+                            Img = reader["Img"].ToString()
+                        };
+                        festivals.Add(p);
+                    }
+                }
+            }
+
+            return festivals;
+        }
+
+        private Festival GetFestival(string id)
+        {
+            List<Festival> festivals = new List<Festival>();
+
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"select * from festival where id = {id}", conn);
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Festival p = new Festival
+                        {
+                            Id = Convert.ToInt32(reader["Id"]),
+                            Naam = reader["naam"].ToString(),
+                            Beschrijving = reader["beschrijving"].ToString(),
+                            Datum = DateTime.Parse(reader["datum"].ToString()),
+                            Img = reader["Img"].ToString()
+                        };
+                    }
+                }
+            }
+
+            return festivals[0];
+        }
 
     private void SavePerson(PersonModel person)
         {

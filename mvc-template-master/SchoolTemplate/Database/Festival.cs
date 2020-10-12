@@ -12,7 +12,7 @@ namespace SchoolTemplate.Database
 
         public string Img { get; set; }
         
-    public DateTime datum { get; set; }
+    public DateTime Datum { get; set; }
 
     /// <summary>
     /// Gebruik altijd decimal voor geldzaken. Dit doe je om te voorkomen dat er afrondingsfouten optreden
