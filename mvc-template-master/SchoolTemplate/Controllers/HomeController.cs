@@ -10,8 +10,8 @@ namespace SchoolTemplate.Controllers
 {
     public class HomeController : Controller
     {
-        string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;";
-
+        string connectionString = "Server=172.16.160.21;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;";
+ // Server=informatica.st-maartenscollege.nl
         // [Route("Index")]
         public IActionResult Index()
         {

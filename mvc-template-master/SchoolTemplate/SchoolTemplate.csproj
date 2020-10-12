@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <None Include="Views\Home\FAQ.cshtml" />
-    <None Include="wwwroot\Sources\fimg\aggaveld.png" />
+    <None Include="wwwroot\Sources\aggaveld.png" />
     <None Include="wwwroot\Sources\Img\glitch.png" />
     <None Include="wwwroot\Sources\Img\insta.png" />
     <None Include="wwwroot\Sources\Img\logo.png" />
@@ -24,6 +24,11 @@
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.1.1" PrivateAssets="All" />
     <PackageReference Include="MySql.Data" Version="8.0.18" />
+  </ItemGroup>
+
+
+  <ItemGroup>
+    <Folder Include="wwwroot\Sources\fimg\" />
   </ItemGroup>
 
 </Project>
