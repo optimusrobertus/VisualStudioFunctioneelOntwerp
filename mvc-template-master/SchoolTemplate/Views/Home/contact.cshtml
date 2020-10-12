@@ -4,6 +4,7 @@
 @section style{
     <link href="/css/contact.css" type="text/css" rel="stylesheet" />
 }
+
 <h1>Contact</h1>
 
 @if (Model != null)
@@ -22,23 +23,23 @@
     <form method="post">
 
         <label for="fname">First name</label><br />
-        @Html.ValidationMessageFor(m => m.firstname) 
+        @Html.ValidationMessageFor(m => m.firstname, "", new { @class = "error" }) 
         <input type="text" id="fname" name="firstname" placeholder="Your name" /> <br />
 
         <label for="lname">Last name</label><br />
-        @Html.ValidationMessageFor(m => m.lastname) 
+        @Html.ValidationMessageFor(m => m.lastname, "", new { @class = "error" }) 
         <input type="text" id="lname" name="lastname" placeholder="Your name" /> <br />
 
-        <label for="phone">Phone number</label>
-        @Html.ValidationMessageFor(m => m.phonenumber) <br />
+        <label for="phone">Phone number</label><br />
+        @Html.ValidationMessageFor(m => m.phonenumber, "", new { @class = "error" })
         <input type="text" id="phone" name="phonenumber" placeholder="Your phone number" /><br />
 
         <label for="email">Email address</label><br />
-        @Html.ValidationMessageFor(m => m.email)
+        @Html.ValidationMessageFor(m => m.email, "", new { @class = "error" })
         <input type="text" id="email" name="email" placeholder="Your email" /> <br />
 
         <label for="subject">What do you want to contact us about?</label><br />
-        @Html.ValidationMessageFor(m => m.subject)
+        @Html.ValidationMessageFor(m => m.subject, "", new { @class = "error" })
         <textarea id="subject" name="subject" placeholder="Write something"></textarea><br />
 
         <input type="submit" value="send" />

@@ -1,0 +1,19 @@
+﻿.thankyou {
+    width: 30%;
+    margin: auto;
+}
+
+h1 {
+    font-family: 'Fredoka One';
+    color: white;
+    text-align: center;
+    text-decoration: overline;
+    font-size: 300%;
+    padding: 3% 3% 0% 2%;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: center;
+}

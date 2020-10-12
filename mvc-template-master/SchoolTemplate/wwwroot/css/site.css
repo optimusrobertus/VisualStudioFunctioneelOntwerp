@@ -1,4 +1,4 @@
-﻿﻿body, html {
+﻿body, html {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -19,7 +19,7 @@
     color: white;
     padding: 0.4%;
     font-family: 'Fredoka One';
-    letter-spacing: 20%;
+    text-align: center;
 }
 
     .topnav > div {
@@ -81,100 +81,8 @@ footer {
     padding: 2% 4% 12% 4%;
     display: flex;
     flex-direction: row;
-    font-family: 'Montserrat';
-}
-
-    footer > div {
-        color: #e7dce8;
-        margin: 0 3% 0 3%;
-        padding: 0.2% 1.2% 2% 1.2%;
-        font-size: 200%;
-    }
-
-body, html {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    position: relative;
-    min-width: 100%;
-    height: 100%;
-    background: linear-gradient(180deg, #D263E9 0%, rgba(255, 255, 255, 0) 100%), #6DC6CE;
-    background-repeat: no-repeat;
-}
-
-.topnav {
-    min-width: 100%;
-    display: flex;
-    flex-direction: row;
-    margin-top: -1%;
-    margin-left: -2%;
-    background-color: black;
-    color: white;
-    padding: 0.4%;
-    font-family: 'Fredoka One';
-    letter-spacing: 20%;
-}
-
-    .topnav > div {
-        margin: 0 4% 0 4%;
-        padding: 2% 4% 2% 19%;
-        font-size: 80px;
-        text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    }
-
-img[target="topnav"] {
-    margin-left: 3%;
-}
-
-nav {
-    background-color: #f5daf7;
-    font-family: 'Fredoka One';
-    display: flex;
-    flex-direction: row;
-    min-width: 4%;
-    margin: 0 -1% 0 -1%;
-    padding: 0 5% 0 5%;
-}
-
-    nav > div {
-        color: #ee1960;
-        margin: 0 2% 0 2%;
-        padding: 2% 0.5% 2% 0.5%;
-        font-size: 200%;
-        text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    }
-
-a {
-    opacity: 1;
-    color: #ee1960;
-    text-decoration: none;
-    transition: all 300ms ease;
-}
-
-
-    a[target="foot"] {
-        opacity: 1;
-        color: #e7dce8;
-        text-decoration: none;
-        transition: all 300ms ease;
-    }
-
-    a:hover {
-        opacity: 0.6;
-        transition: opacity .2s ease-out;
-        -moz-transition: opacity .2s ease-out;
-        -webkit-transition: opacity .2s ease-out;
-        -o-transition: opacity .2s ease-out;
-    }
-
-footer {
-    background-color: #122f6b;
-    min-width: 4%;
-    margin: 1% -1% 0% -1%;
-    padding: 2% 4% 12% 4%;
-    display: flex;
-    flex-direction: row;
-    font-family: 'Montserrat';
+    font-family: 'Roboto', sans-serif;
+    text-decoration-color: white;
 }
 
     footer > div {

@@ -42,10 +42,26 @@ input[type=submit]:hover {
 h1 {
     font-family: 'Fredoka One';
     font-size: 300%;
-    padding: 5% 3% 2% 3%;
+    padding: 3% 3% 0% 2%;
     text-align: center;
     text-decoration: overline;
     color: white;
+}
+
+label {
+    font-family: 'Fredoka One';
+    color: white;
+    font-size: 20px;
+}
+
+::placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: grey;
+}
+
+.error {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
 }
 
 .field-validation-error {
