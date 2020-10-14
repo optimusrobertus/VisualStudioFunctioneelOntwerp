@@ -8,23 +8,37 @@
     margin: 4% 0% 0 0%;
 }
 
-.introduction{
-    background-image: url('/Sources/Img/indexbg.jpg');
+.introduction {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Sources/Img/maxresdefault.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;   
 }
 
 .introduction h1 {
     font-family: 'Fredoka One';
-    font-size: 300%;
+    font-size: 600%;
     padding: 5% 3% 2% 3%;
     text-align: center;
     text-decoration: overline;
     color: white;
 }
 
+.introduction p {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 100%;
+}
+
 
 .news {
     font-family: 'Roboto', sans-serif;
-    font-size: 200%;
     color: white;
     padding: 0 5% 2% 5%;
     display: flex;
