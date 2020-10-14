@@ -8,21 +8,24 @@
     </h1>
 
     <p>
-        Welcome to Aggaveld. Aggaveld is the biggest festival field of Europe, and we, Robert Dilber and Ramez Karius, are its proud owners.
+        Welcome to Aggaveld. Aggaveld is the biggest festival field of Europe, and we, Robert Dilber and Ramez Karius, are its proud owners. <br />
+        Every year, we host a variety of different festivals. And since the beginning of 2015, we've brought in some of the biggest artists at the moment, like Kendrick Lamar, 6ix9ine and more, every year.
     </p>
 </div>
 
 <div class="news">
     <h1 target="news">LATEST NEWS</h1>
+    <div class="covid">
+        <span class="closebutton" onclick="this.parentElement.style.display = 'none';">&times;</span>
+        <b>Take notice!</b> Because of the Covid-19 outbreak, some festivals have been delayed or permanently cancelled!  
+    </div>
+
     @foreach (Festival f in Model)
     {
         <p>@f.Naam</p>
         <img class="bg" src="@f.Img" />
     }
-    <p>
-        SUMMERBLAST 2020 is now confirmed! Get your tickets now at our <a href="#" style="color:white;">ticket page!</a><br><br>
-        SPRINGBREAK FESTIVAL is SOLD OUT! Tickets for SPRINGBREAK FESTIVAL 2021 will soon be for sale!
-    </p>
+
     <a target="fest" href="#">
         <h3 target="Spring">Springbreak festival</h3>
         <h3 target="summer">Summer festival</h3>

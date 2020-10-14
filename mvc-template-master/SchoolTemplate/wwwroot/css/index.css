@@ -23,7 +23,7 @@
 
 .introduction h1 {
     font-family: 'Fredoka One';
-    font-size: 600%;
+    font-size: 500%;
     padding: 5% 3% 2% 3%;
     text-align: center;
     text-decoration: overline;
@@ -34,6 +34,8 @@
     font-family: 'Roboto', sans-serif;
     color: white;
     font-size: 100%;
+    width: 70%;
+    text-align: center;
 }
 
 
@@ -54,6 +56,31 @@
     text-align: center;
     text-decoration: overline;
 }
+
+/* The alert message box */
+.covid {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+}
+
+/* The close button */
+.closebutton {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+    /* When moving the mouse over the close button */
+    .closebutton:hover {
+        color: black;
+    }
 
 a[target="more-news"] {
     opacity: 1;

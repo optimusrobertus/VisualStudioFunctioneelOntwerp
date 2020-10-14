@@ -64,12 +64,6 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-        [Route("line")]
-        public IActionResult line()
-        {
-            return View();
-        }
-
         [Route("FAQ")]
         public IActionResult FAQ()
         {
@@ -79,16 +73,19 @@ namespace SchoolTemplate.Controllers
         [Route("festival")]
         public IActionResult Festival()
         {
+
             return View();
         }
 
+
         [Route("festival/{id}")]
-        public IActionResult Festival(string id)
+        public IActionResult Festival(int id)
         {
             var model = GetFestival(id);
 
             return View(model);
         }
+
 
         private List<Festival> GetLatestFestivals()
         {
@@ -118,7 +115,7 @@ namespace SchoolTemplate.Controllers
             return festivals;
         }
 
-        private Festival GetFestival(string id)
+        private Festival GetFestival(int id)
         {
             List<Festival> festivals = new List<Festival>();
 
