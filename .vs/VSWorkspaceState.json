@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\mvc-template-master",
+    "\\mvc-template-master\\SchoolTemplate",
+    "\\mvc-template-master\\SchoolTemplate\\Controllers",
+    "\\mvc-template-master\\SchoolTemplate\\Database",
+    "\\mvc-template-master\\SchoolTemplate\\Models",
+    "\\mvc-template-master\\SchoolTemplate\\Properties",
+    "\\mvc-template-master\\SchoolTemplate\\Views",
+    "\\mvc-template-master\\SchoolTemplate\\Views\\Home",
+    "\\mvc-template-master\\SchoolTemplate\\Views\\Shared"
+  ],
+  "SelectedNode": "\\mvc-template-master\\SchoolTemplate\\SchoolTemplate.csproj",
+  "PreviewInSolutionExplorer": false
+}
