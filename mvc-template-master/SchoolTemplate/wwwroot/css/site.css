@@ -45,6 +45,7 @@ img[target="topnav"] {
     align-self: center;
 }
 
+
 nav {
     background-color: #f5daf7;
     font-family: 'Fredoka One';
@@ -60,13 +61,13 @@ nav {
         color: #ee1960;
         margin: 0 2% 0 2%;
         padding: 2% 0.5% 2% 0.5%;
-        font-size: 200%;
+        font-size: 93%;
         text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
     }
 
-    // @media screen and (max-width: 377px ) {
-        .topnav{
-            display: block;
+     @media only screen and (max-width: 373px) {
+       img#beter{
+            display: none;
         }
     }
 
