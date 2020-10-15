@@ -1,0 +1,13 @@
+﻿@*@model SchoolTemplate.Database.Festivals*@
+@using SchoolTemplate.Database;
+@model List<Festivals>
+
+@*@{
+    ViewData["Title"] = "Festivals";
+}*@
+
+@foreach (Festivals f in Model)
+{
+    <p>@f.Naam</p>
+    <img class="bg" src="@f.Img" />
+}
