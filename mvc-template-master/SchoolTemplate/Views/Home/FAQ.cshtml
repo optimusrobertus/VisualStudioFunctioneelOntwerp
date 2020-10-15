@@ -1,17 +1,72 @@
 ﻿@using SchoolTemplate.Database;
-@model List<Festival>
+@model List<Festivals>
 @{ ViewData["Title"] = "Frequently Asked Questions"; }
 
+@section style{
+    <link href="/css/FAQ.css" type="text/css" rel="stylesheet" />
+}
 
-<div class="main">
-    <h1>Frequently Asked Questions:</h1>
-    <a target="FAQ" href="#">Where can I buy my tickets?</a><br><br>
-    <a target="FAQ" href="#">Where can I sign up as an artist?</a><br><br>
-    <a target="FAQ" href="#">Are lockers available on the field?</a><br><br>
-    <a target="FAQ" href="#">Can I refund my ticket?</a><br><br>
-    <a target="FAQ" href="#">Is there a First Aid service?</a><br><br>
-    <a target="FAQ" href="#">Is there a parking lot?</a><br><br>
-    <a target="FAQ" href="#">Can I recommend artists?</a><br><br>
-    <a target="FAQ" href="#">Why can I only buy 2 tickets at the time?</a><br><br>
-    <a target="FAQ" href="#">Is there a lost and found service?</a><br><br>
+<h1>Frequently Asked Questions:</h1>
+<div class="questions">
+    <button class="accordion"><span>Can I refund my ticket?</span></button>
+    <div class="panel">
+        <p>.</p>
+    </div>
+
+    <button class="accordion"><span>Where can I buy my tickets?</span></button>
+    <div class="panel">
+        <p>.</p>
+    </div>
+
+    <button class="accordion"><span>Where can I sign up as an artist?</span></button>
+    <div class="panel">
+        <p>.</p>
+    </div>
+
+    <button class="accordion"><span>Are lockers available on the field?</span></button>
+    <div class="panel">
+        <p>.</p>
+    </div>
+
+    <button class="accordion"><span>Is there a First Aid service?</span></button>
+    <div class="panel">
+        <p>.</p>
+    </div>
+
+    <button class="accordion"><span>Is there a parking lot?</span></button>
+    <div class="panel">
+        <p>.</p>
+    </div>
+
+    <button class="accordion"><span>Can I recommend artists?</span></button>
+    <div class="panel">
+        <p>.</p>
+    </div>
+
+    <button class="accordion"><span>Why can I only buy 2 tickets at the time?</span></button>
+    <div class="panel">
+        <p>.</p>
+    </div>
+
+    <button class="accordion"><span>Is there a lost and found service?</span></button>
+    <div class="panel">
+        <p>.</p>
+    </div>
+    <br /><br /><br /><br />
 </div>
+
+
+<script>var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }</script>

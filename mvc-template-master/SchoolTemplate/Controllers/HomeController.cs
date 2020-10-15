@@ -20,7 +20,7 @@ namespace SchoolTemplate.Controllers
         // [Route("Index")]
         public IActionResult Index()
         {
-            List<Festival> festivals = new List<Festival>();
+            List<Festivals> festivals = new List<Festivals>();
             festivals = GetLatestFestivals();
 
             return View(festivals);
@@ -64,45 +64,41 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-        [Route("line")]
-        public IActionResult line()
-        {
-            return View();
-        }
-
         [Route("FAQ")]
         public IActionResult FAQ()
         {
             return View();
         }
 
-        [Route("festival")]
-        public IActionResult Festival()
+        [Route("festivals")]
+        public IActionResult Festivals()
         {
             return View();
         }
 
-        [Route("festival/{id}")]
-        public IActionResult Festival(string id)
+
+        [Route("festivals/{id}")]
+        public IActionResult Festivals(int id)
         {
             var model = GetFestival(id);
 
             return View(model);
         }
 
-        private List<Festival> GetLatestFestivals()
+
+        private List<Festivals> GetLatestFestivals()
         {
-            List<Festival> festivals = new List<Festival>();
+            List<Festivals> festivals = new List<Festivals>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand($"select * from festival limit 3", conn);
+                MySqlCommand cmd = new MySqlCommand($"select * from festivals limit 3", conn);
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Festival p = new Festival
+                        Festivals p = new Festivals
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["naam"].ToString(),
@@ -118,19 +114,19 @@ namespace SchoolTemplate.Controllers
             return festivals;
         }
 
-        private Festival GetFestival(string id)
+        private Festivals GetFestival(int id)
         {
-            List<Festival> festivals = new List<Festival>();
+            List<Festivals> festivals = new List<Festivals>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand($"select * from festival where id = {id}", conn);
+                MySqlCommand cmd = new MySqlCommand($"select * from festivals where id = {id}", conn);
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Festival p = new Festival
+                        Festivals p = new Festivals
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["naam"].ToString(),
@@ -138,6 +134,7 @@ namespace SchoolTemplate.Controllers
                             Datum = DateTime.Parse(reader["datum"].ToString()),
                             Img = reader["Img"].ToString()
                         };
+                        festivals.Add(p);
                     }
                 }
             }
