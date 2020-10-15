@@ -1,0 +1,57 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace SchoolTemplate.wwwroot.css
+{
+    public class upcoming
+    {
+    }
+}
+
+h1 {
+    font-family: 'Fredoka One';
+    font-size: 300%;
+    color: white;
+    text-decoration: overline;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 3% 3% 0% 2%;
+}
+
+.card-body-header {
+    display: flex;
+}
+
+.card-group > .card {
+    flex: 80%;
+    border-radius: 44px !important;
+}
+
+.card {
+    border: 0 !important;
+    border-radius: 44px !important;
+    margin-right: 5%;
+    margin-bottom: 5% !important;
+    text-align: center;
+}
+
+.card-group {
+    margin-left: 5%;
+}
+
+.festival-cover {
+    width: 50%;
+    height: 50%;
+}
+
+.button {
+    color: black !important;
+}
+
+.card-text {
+    max-width: 200px;
+}

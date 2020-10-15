@@ -20,14 +20,42 @@ namespace SchoolTemplate.Controllers
         // [Route("Index")]
         public IActionResult Index()
         {
-            List<Festivals> festivals = new List<Festivals>();
-            festivals = GetFestival();
+            List<Festival> festivals = new List<Festival>();
+            festivals = GetFestivals();
 
             return View(festivals);
         }
+        private List<Festival> GetFestivals()
+        {
+            List<Festival> festivals = new List<Festival>();
 
-        [Route("account")]
-        public IActionResult account()
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand($"select * from festival", conn);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Festival p = new Festival
+                        {
+                            Id = Convert.ToInt32(reader["ID"]),
+                            Naam = reader["naam"].ToString(),
+                            Beschrijving = reader["beschrijving"].ToString(),
+                            Datum = DateTime.Parse(reader["datum"].ToString()),
+                            Img = reader["Img"].ToString(),
+                            Prijs = Convert.ToDecimal(reader["Prijs"]),
+                        };
+                        festivals.Add(p);
+                    }
+                }
+            }
+            return festivals;
+        }
+
+        [Route("upcoming")]
+        public IActionResult upcoming()
         {
             return View();
         }
@@ -70,79 +98,47 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-        [Route("festivals")]
-        public IActionResult Festivals()
-        {
-            return View();
-        }
-
 
         [Route("festivals/{id}")]
-        public IActionResult Festivals(int id)
+        public IActionResult Festivals(string id)
         {
             var model = GetFestival(id);
 
             return View(model);
         }
 
-
-        private List<Festivals> GetFestival()
+        private List<Festival> GetFestival(string id)
         {
-            List<Festivals> festivals = new List<Festivals>();
+            List<Festival> festivals = new List<Festival>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand($"select * from festival limit 3", conn);
+                MySqlCommand cmd = new MySqlCommand($"select * from festival", conn);
+
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Festivals p = new Festivals
+                        Festival p = new Festival
                         {
-                            Id = Convert.ToInt32(reader["Id"]),
+                            Id = Convert.ToInt32(reader["ID"]),
                             Naam = reader["naam"].ToString(),
                             Beschrijving = reader["beschrijving"].ToString(),
                             Datum = DateTime.Parse(reader["datum"].ToString()),
-                            Img = reader["Img"].ToString()
+                            Img = reader["Img"].ToString(),
+                            Prijs = Convert.ToDecimal(reader["Prijs"]),
                         };
                         festivals.Add(p);
                     }
                 }
             }
-
             return festivals;
         }
 
-        private Festivals GetFestival(int id)
-        {
-            List<Festivals> festivals = new List<Festivals>();
 
-            using (MySqlConnection conn = new MySqlConnection(connectionString))
-            {
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand($"select * from festivals where id = {id}", conn);
-                using (var reader = cmd.ExecuteReader())
-                {
-                    while (reader.Read())
-                    {
-                        Festivals p = new Festivals
-                        {
-                            Id = Convert.ToInt32(reader["Id"]),
-                            Naam = reader["naam"].ToString(),
-                            Beschrijving = reader["beschrijving"].ToString(),
-                            Datum = DateTime.Parse(reader["datum"].ToString()),
-                            Img = reader["Img"].ToString()
-                        };
-                        festivals.Add(p);
-                    }
-                }
-            }
 
-            return festivals[0];
-        }
-
-    private void SavePerson(PersonModel person)
+        private void SavePerson(PersonModel person)
         {
             using(MySqlConnection conn= new MySqlConnection(connectionString))
             {
