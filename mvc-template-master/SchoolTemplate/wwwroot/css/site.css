@@ -54,19 +54,27 @@ nav {
     margin: 0 -1% 0 -1%;
     padding: 0 5% 0 5%;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
-    nav > div {
+    .midnav div {
         color: #ee1960;
         margin: 0 2% 0 2%;
         padding: 2% 0.5% 2% 0.5%;
-        font-size: 200%;
         text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
     }
 
-    // @media screen and (max-width: 377px ) {
-        .topnav {
-            display: block;
+    .midnav div a {
+        font-size: 200%;
+    }
+
+     @media screen and (max-width: 375px ) {
+        .glitch {
+            display: none;
+        }
+
+        .midnav div a {
+            font-size: 93%;
         }
     }
 
