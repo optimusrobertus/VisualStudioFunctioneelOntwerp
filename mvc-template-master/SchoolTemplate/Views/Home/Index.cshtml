@@ -1,5 +1,5 @@
 ﻿@using SchoolTemplate.Database;
-@model List<Festivals>
+@model List<Festival>
 @{ ViewData["Title"] = "Home Page"; }
 
 <div class="introduction">
@@ -20,7 +20,7 @@
         <b>Take notice!</b> Because of the Covid-19 outbreak, some festivals have been delayed or permanently cancelled!  
     </div>
 
-    @foreach (Festivals f in Model)
+    @foreach (Festival f in Model)
     {
         <p>@f.Naam</p>
         <img class="bg" src="@f.Img" />
