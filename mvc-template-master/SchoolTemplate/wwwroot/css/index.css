@@ -31,11 +31,12 @@
 }
 
 .introduction p {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fredoka one';
     color: white;
     font-size: 100%;
     width: 70%;
     text-align: center;
+    margin-bottom: 10%;
 }
 
 

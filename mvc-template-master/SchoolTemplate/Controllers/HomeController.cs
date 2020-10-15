@@ -13,14 +13,14 @@ namespace SchoolTemplate.Controllers
     {
 
         // zorg ervoor dat je hier je gebruikersnaam (leerlingnummer) en wachtwoord invult
-        string connectionString = "Server=172.16.160.21;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;"; //voor school
-        //string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;"; //voor thuis
+        //string connectionString = "Server=172.16.160.21;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;"; //voor school
+        string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;"; //voor thuis
 
 
         // [Route("Index")]
         public IActionResult Index()
         {
-            List<Festival> festivals = new List<Festival>();
+            List<Festivals> festivals = new List<Festivals>();
             festivals = GetLatestFestivals();
 
             return View(festivals);
@@ -70,15 +70,15 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-        [Route("festival")]
-        public IActionResult Festival()
+        [Route("festivals")]
+        public IActionResult Festivals()
         {
             return View();
         }
 
 
-        [Route("festival/{id}")]
-        public IActionResult Festival(int id)
+        [Route("festivals/{id}")]
+        public IActionResult Festivals(int id)
         {
             var model = GetFestival(id);
 
@@ -86,19 +86,19 @@ namespace SchoolTemplate.Controllers
         }
 
 
-        private List<Festival> GetLatestFestivals()
+        private List<Festivals> GetLatestFestivals()
         {
-            List<Festival> festivals = new List<Festival>();
+            List<Festivals> festivals = new List<Festivals>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand($"select * from festival limit 3", conn);
+                MySqlCommand cmd = new MySqlCommand($"select * from festivals limit 3", conn);
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Festival p = new Festival
+                        Festivals p = new Festivals
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["naam"].ToString(),
@@ -114,19 +114,19 @@ namespace SchoolTemplate.Controllers
             return festivals;
         }
 
-        private Festival GetFestival(int id)
+        private Festivals GetFestival(int id)
         {
-            List<Festival> festivals = new List<Festival>();
+            List<Festivals> festivals = new List<Festivals>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand($"select * from festival where id = {id}", conn);
+                MySqlCommand cmd = new MySqlCommand($"select * from festivals where id = {id}", conn);
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Festival p = new Festival
+                        Festivals p = new Festivals
                         {
                             Id = Convert.ToInt32(reader["Id"]),
                             Naam = reader["naam"].ToString(),

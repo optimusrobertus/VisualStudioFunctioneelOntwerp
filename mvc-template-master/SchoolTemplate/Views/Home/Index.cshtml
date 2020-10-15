@@ -1,5 +1,5 @@
 ﻿@using SchoolTemplate.Database;
-@model List<Festival>
+@model List<Festivals>
 @{ ViewData["Title"] = "Home Page"; }
 
 <div class="introduction">
@@ -8,8 +8,8 @@
     </h1>
 
     <p>
-        Welcome to Aggaveld. Aggaveld is the biggest festival field of Europe, and we, Robert Dilber and Ramez Karius, are its proud owners. <br />
-        Every year, we host a variety of different festivals. And since the beginning of 2015, we've brought in some of the biggest artists at the moment, like Kendrick Lamar, 6ix9ine and more, every year.
+        Welcome to the biggest festival field of Europe: Aggaveld! <br />
+        At Aggaveld, we host a variety of different festivals every year. We have something for everyone. 
     </p>
 </div>
 
@@ -20,7 +20,7 @@
         <b>Take notice!</b> Because of the Covid-19 outbreak, some festivals have been delayed or permanently cancelled!  
     </div>
 
-    @foreach (Festival f in Model)
+    @foreach (Festivals f in Model)
     {
         <p>@f.Naam</p>
         <img class="bg" src="@f.Img" />

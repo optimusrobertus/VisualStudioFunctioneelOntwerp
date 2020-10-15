@@ -1,39 +1,75 @@
 ﻿@using SchoolTemplate.Database;
-@model List<Festival>
+@model List<Festivals>
 @{ ViewData["Title"] = "The Field"; }
 
 @section style{
     <link href="/css/field.css" type="text/css" rel="stylesheet" />
 }
 
-<div class="recap">
-    <h1>
-        Aftermovies
-    </h1>
-    <p>
-        Here at Aggaveld, we have multiple festivals per year. Every one of them is huge and cool and amazing, <br />
-        but why take our word for it, when you can watch the aftermovies of some of the most visited festivals on Aggaveld?
-    </p>
+<div class="page">
+    <div class="about">
+        <h1>
+            About Aggaveld
+        </h1>
+        <p>
+            Aggaveld is the largest festival field in the world. What makes this location better than any other location, is that Aggaveld has been recognized by the biggest artists of the moment the place to be. This means that every year, the most trending artists will perform at our festival site. <br /> <br />
 
-    <main class="main">
-        
-        <section class="left section">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/nBBaHKQHxiU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </section>
-        
-        <section class="right section">
-            <h2>Tomorrowland Around The World</h2>
-            <p>This was one of the most highly anticapted festivals of the century: Tomorrowland Around The World.</p>
-            
-        </section>
-        
-    @*<iframe width="560" height="315" src="https://www.youtube.com/embed/nNe4RUHpLWI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p></p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/3fxuIcIpZQY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p></p>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/MzO8h7MqEVw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <p></p>*@
-    </main>
+            Going to Aggaveld is like going to another country; the amount of people of different cultures that come here, is astonishing. Although coming to Aggaveld involves a fair amount of travel, and probably a queue to get in, people all over the world still come to the festivals hosted at this site. And for good reasons! At the festival field, it feels almost like you a left the normal, ordinary world behind. Because of the sheer size of our festival site, the different festivals we host each year can go all-out! And that comes with one great benefit: everyone is here to have a wild time in their own way. <br /> <br />
 
+            Then there are the people; thousands of them in all their astonishing and splendid diversity! There is only one common characteristic of a Aggaveld-goer – they understand that Aggaveld offers them more opportunity than any other happening to have the best weekend of the year or even of a life-time, and they are determined to have it! You’ll meet all kinds of people, of all ages, backgrounds, nationalities, lifestyles, faiths, concepts of fashion (or lack of it) and musical taste. Some will undoubtedly wear silly hats or buy shirts that they’ll never wear again… until next festival, that is. The overall vibe that's present at the festivals hostend on Aggaveld is consistently mellow and friendly, even in the event of rain and all that comes with rain, a field and thousands upon thousands of tramping feet. <br /> <br />
+
+            It’s best not to come to Aggaveld with a head full of preconceptions and a notebook full of plans of what you want to see. If there are one or two particular bands a day you really want to see, then let your day revolve around them and go with the flow. Hurrying between stages so you can tick off a list of things you feel you must see is not the best way to enjoy the festivals we host. If you can’t get a good vantage point, or aren’t enjoying a show, move on; there’ll be something else in the next part of the festival site that might just change your way of seeing the world! Often, your best memories at Aggaveld will be of new things that have startled you with their brilliance. <br /> <br />
+
+            Have a good look at the festival page on this site and at the Festival programme when you are on site, or ask at Information points. There are a plethora of wonders to be seen, heard or just caught from the corner of your eye. Aggavled runs like a huge oilded machine – it is the Big Ben of Festival sites after all – and it is best not to stay staring at just one of the huge cogs, however many famous spokes it has. Travel round it clockwise and investigate all the workings of the Festival. All those other stages and attractions wouldn’t be there if they weren’t worth taking in – and they are all capable of surprising a visitor. <br /> <br />
+
+            <b>One last instruction: relax and have fun at Aggaveld! We look forward to seeing you!</b>
+        </p>
+    </div>
+
+    <div class="recap">
+        <h1>
+            Aftermovies
+        </h1>
+        <p>
+            Here at Aggaveld, we have multiple festivals per year. Every one of them is huge and cool and amazing,
+            but why take our word for it, when you can watch the aftermovies of some of the most visited festivals on Aggaveld?
+            <br /> 
+            <br />
+            Below, you'll find 3 of the most visited festivals of 2020.
+            <br />
+        </p>
+
+        <div class="row">
+            <div class="column">
+                <h2>Tomorrowland Around The World</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec elit vitae arcu posuere auctor id nec risus. Nam nec lacus mollis, facilisis elit ac, feugiat orci. Vivamus enim lacus, faucibus sit amet enim nec, varius lobortis augue. Donec tincidunt, tortor non fringilla efficitur, velit felis interdum ligula, id accumsan nisl diam in nisl. Vivamus vel orci at erat pellentesque pellentesque et eu arcu. In rhoncus vitae sem ac pharetra. Quisque vehicula consectetur mi, at accumsan augue tempor eu. Duis bibendum urna metus, id venenatis ligula ullamcorper eu.
+                </p>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/nBBaHKQHxiU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="column">
+                <h2>Ultra Miami 2019</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec elit vitae arcu posuere auctor id nec risus. Nam nec lacus mollis, facilisis elit ac, feugiat orci. Vivamus enim lacus, faucibus sit amet enim nec, varius lobortis augue. Donec tincidunt, tortor non fringilla efficitur, velit felis interdum ligula, id accumsan nisl diam in nisl. Vivamus vel orci at erat pellentesque pellentesque et eu arcu. In rhoncus vitae sem ac pharetra. Quisque vehicula consectetur mi, at accumsan augue tempor eu. Duis bibendum urna metus, id venenatis ligula ullamcorper eu.
+                </p>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/nNe4RUHpLWI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br />
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="column">
+                <h2>Airbeat One</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec elit vitae arcu posuere auctor id nec risus. Nam nec lacus mollis, facilisis elit ac, feugiat orci. Vivamus enim lacus, faucibus sit amet enim nec, varius lobortis augue. Donec tincidunt, tortor non fringilla efficitur, velit felis interdum ligula, id accumsan nisl diam in nisl. Vivamus vel orci at erat pellentesque pellentesque et eu arcu. In rhoncus vitae sem ac pharetra. Quisque vehicula consectetur mi, at accumsan augue tempor eu. Duis bibendum urna metus, id venenatis ligula ullamcorper eu.
+                </p>
+                <iframe width="100%" height="100%" src="https://www.youtube.com/embed/3fxuIcIpZQY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br />
+            </div>
+        </div>
+    </div>
 </div>
-
