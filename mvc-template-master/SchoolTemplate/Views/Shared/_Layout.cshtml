@@ -2,40 +2,39 @@
 <html>
 
 <head>
-    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Fredoka%20One">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="~/css/site.css" type="text/css" />
     <link rel="stylesheet" href="~/css/index.css" type="text/css" />
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon" />
+    @RenderSection("style", false)
     <title>Aggaveld</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 </head>
 
 <body>
     <div class="topnav">
         <img target="topnav" src="/Sources/Img/logo.png" alt="aggaveld" style="width:10%;height:10%;">
-        <div>AGGAVELD </div>
+        <p>AGGAVELD</p>
     </div>
     <nav>
-        <div><a href="Index">HOME</a></div>
+        <div><a href="/">HOME</a></div>
+        <div><img src="/Sources/Img/glitch.png"></div>
+        <div><a href="festival">UPCOMING</a></div>
         <div><img src="/Sources/Img/glitch.png"></div>
         <div><a href="field">THE FIELD</a></div>
         <div><img src="/Sources/Img/glitch.png"></div>
-        <div><a href="line">UPCOMING</a></div>
-        <div><img src="/Sources/Img/glitch.png"></div>
-        <div><a href="FAQ">FAQ</a></div>
-        <div><img src="/Sources/Img/glitch.png"></div>
-        <div><a href="account">ACCOUNT</a></div>
+        <div><a href="contact">CONTACT</a></div>
 
     </nav>
 
-   @RenderBody()
+    @RenderBody()
 
     <footer>
-        <div><a target="foot" href="#">Contact us</a></div>
-        <div><a target="foot" href="#">Apply</a></div>
-        <div><a target="foot" href="#">News</a></div>
-        <div><a target="foot" href="#">FAQ</a></div>
-        <div><a target="foot" href="#">Tickets</a></div>
-        <div><a target="foot" href="#">Line-up</a></div>
+        <div><a href="FAQ">FAQ</a></div>
+        <div><a href="line">Line-up</a></div>
+        <div><a href="contact">Contact us</a></div>
     </footer>
 </body>
 

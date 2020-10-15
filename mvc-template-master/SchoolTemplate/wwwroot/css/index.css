@@ -8,7 +8,46 @@
     margin: 4% 0% 0 0%;
 }
 
-h1[target="news"] {
+.introduction {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Sources/Img/maxresdefault.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;   
+}
+
+.introduction h1 {
+    font-family: 'Fredoka One';
+    font-size: 600%;
+    padding: 5% 3% 2% 3%;
+    text-align: center;
+    text-decoration: overline;
+    color: white;
+}
+
+.introduction p {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 100%;
+}
+
+
+.news {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    padding: 0 5% 2% 5%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.news h1 {
     font-family: 'Fredoka One';
     font-size: 300%;
     padding: 5% 3% 2% 3%;
@@ -16,7 +55,7 @@ h1[target="news"] {
     text-decoration: overline;
 }
 
-a[target="news"] {
+a[target="more-news"] {
     opacity: 1;
     padding: 0.8% 2% 0.8% 2%;
     color: white;
@@ -33,19 +72,6 @@ a[target="fest"] {
     width: 100%;
 }
 
-
-
-.news {
-    font-family: 'Montserrat';
-    font-size: 200%;
-    color: white;
-    padding: 0 5% 2% 5%;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    align-items: center;
-}
-
 .button-news {
     background-color: #e579ed;
     border: none;
@@ -54,7 +80,7 @@ a[target="fest"] {
     text-decoration: none;
     display: inline-block;
     font-size: 100%;
-    border-radius: 20%;
+    border-radius: 5%;
     box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
     max-width: 20%;
 }
@@ -68,7 +94,7 @@ a[target="fest"] {
 
 h3[target="Spring"] {
     text-align: center;
-    font-family: 'Montserrat';
+    font-family: 'Roboto', sans-serif;
     color: white;
     background-image: url(/Sources/Img/springbreak.jpg);
     padding: 10% 0 10% 0;
@@ -79,7 +105,7 @@ h3[target="Spring"] {
 
 h3[target="summer"] {
     text-align: center;
-    font-family: 'Montserrat';
+    font-family: 'Roboto', sans-serif;
     color: white;
     background-image: url(/Sources/Img/summerfest.jpg);
     padding: 10% 0 10% 0;

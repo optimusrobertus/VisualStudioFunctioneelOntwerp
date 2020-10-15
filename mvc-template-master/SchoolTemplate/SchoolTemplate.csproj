@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <None Include="Views\Home\FAQ.cshtml" />
-    <None Include="wwwroot\Sources\Img\aggaveld.png" />
+    <None Include="wwwroot\Sources\aggaveld.png" />
     <None Include="wwwroot\Sources\Img\glitch.png" />
     <None Include="wwwroot\Sources\Img\insta.png" />
     <None Include="wwwroot\Sources\Img\logo.png" />
