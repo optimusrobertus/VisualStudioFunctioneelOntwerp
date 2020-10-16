@@ -1,0 +1,12 @@
+﻿body, html{
+    width: 80%;
+}
+
+h1 {
+    font-family: 'Fredoka One';
+    font-size: 300%;
+    padding: 3% 3% 0% 2%;
+    text-align: center;
+    text-decoration: overline;
+    color: white;
+}

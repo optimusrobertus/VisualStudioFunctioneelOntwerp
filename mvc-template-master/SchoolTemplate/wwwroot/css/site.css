@@ -113,25 +113,6 @@ a {
         -o-transition: opacity .2s ease-out;
     }
 
-/*footer {
-    background-color: #122f6b;
-    min-width: 4%;
-    margin: 1% -1% 0% -1%;
-    padding: 2% 4% 12% 4%;
-    display: flex;
-    flex-direction: row;
-    font-family: 'Roboto', sans-serif;
-    text-decoration-color: white;
-    justify-content: center; 
-}
-
-    footer > div {
-        color: #e7dce8;
-        margin: 0 3% 0 3%;
-        padding: 0.2% 1.2% 2% 1.2%;
-        font-size: 200%;
-    }*/
-
 ul {
     list-style: none;
     padding-left: 0;
@@ -154,8 +135,7 @@ a:hover {
 
 .ft-title {
     color: #fff;
-    font-family: ’Merriweather’, serif;
-    font-size: 1.375rem;
+    font-family: 'Fredoka One';
     padding-bottom: 0.625rem;
 }
 
@@ -168,6 +148,8 @@ a:hover {
 .ft-main-item {
     padding: 1.25rem;
     min-width: 12.5rem /*200px*/;
+    font-family: 'roboto', sans-serif;
+    color: white;
 }
 @media only screen and (min-width: 29.8125rem /*477px*/ ) {
     .ft-main {
@@ -179,26 +161,6 @@ a:hover {
     .ft-main {
         justify-content: space-evenly;
     }
-}
-
-form {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-input[type="email"] {
-    border: 0;
-    padding: 0.625rem;
-    margin-top: 0.3125rem;
-}
-
-input[type="submit"] {
-    background-color: #00d188;
-    color: #fff;
-    cursor: pointer;
-    border: 0;
-    padding: 0.625rem 0.9375rem;
-    margin-top: 0.3125rem;
 }
 
 .ft-social {
@@ -215,24 +177,5 @@ input[type="submit"] {
     .ft-social-list li {
         margin: 0.5rem;
         font-size: 1.25rem;
+
     }
-
-.ft-legal {
-    padding: 0.9375rem 1.875rem;
-    background-color: #333;
-}
-
-.ft-legal-list {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-    .ft-legal-list li {
-        margin: 0.125rem 0.625rem;
-        white-space: nowrap;
-    }
-        /* one before the last child */
-        .ft-legal-list li:nth-last-child(2) {
-            flex: 1; /* same as flex-grow: 1; */
-        }

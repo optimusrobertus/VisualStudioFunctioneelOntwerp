@@ -107,6 +107,12 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
+        [Route("aboutus")]
+        public IActionResult aboutus()
+        {
+            return View();
+        }
+
 
         [Route("festivals/{id}")]
         public IActionResult Festivals(string id)

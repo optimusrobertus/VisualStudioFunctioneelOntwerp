@@ -1,6 +1,13 @@
-﻿.page {
-    border: 2px black;
-    border-radius: 50px;
+﻿.page a {
+    color: white;
+}
+
+    .page a:hover {
+        text-decoration: none;
+        opacity: 1;
+    }
+
+.page {
     width: 80%;
     display: flex;
     align-items: center;
