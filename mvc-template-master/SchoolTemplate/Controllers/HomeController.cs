@@ -98,6 +98,12 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
+        [Route("upcoming")]
+        public IActionResult upcoming()
+        {
+            return View(GetFestivals());
+        }
+
 
         [Route("festivals/{id}/{naam}")]
         public IActionResult Festivals(string id)

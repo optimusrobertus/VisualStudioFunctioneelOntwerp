@@ -1,0 +1,22 @@
+﻿@model IEnumerable<SchoolTemplate.Database.Festival>
+@{ ViewData["Title"] = "Festival"; }
+@section style{
+    <link href="/css/upcoming.css" type="text/css" rel="stylesheet" />
+}
+
+<h1 class="Title">Upcoming events</h1>
+
+<div class="news">
+    <div class="covid">
+        <span class="closebutton" onclick="this.parentElement.style.display = 'none';">&times;</span>
+        <b>Take notice!</b> Because of the Covid-19 outbreak, some festivals have been delayed or permanently cancelled!
+    </div>
+
+    @*@foreach (Festival f in Model)
+        <div class="rcolumn"><img class="festival-cover" src="@f.Img" /></div>
+    <div class="lcolumn">
+        <h2>@f.Naam</h2>
+        <p>@f.Beschrijving</p>
+    </div>
+    }*@
+</div>

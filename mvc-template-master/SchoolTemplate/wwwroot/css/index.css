@@ -131,7 +131,7 @@ h2 {
 
 .description {
     white-space: nowrap;
-    max-width: 600px;
+    max-width: 200px;
     overflow: hidden;
     text-overflow: ellipsis;
 }
