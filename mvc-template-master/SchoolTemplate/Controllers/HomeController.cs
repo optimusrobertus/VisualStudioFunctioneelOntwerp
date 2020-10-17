@@ -105,7 +105,7 @@ namespace SchoolTemplate.Controllers
         }
 
 
-        [Route("festivals/{id}/{naam}")]
+        [Route("festivals/{id}")]
         public IActionResult Festivals(string id)
         {
             var model = GetFestival(id);
@@ -113,24 +113,23 @@ namespace SchoolTemplate.Controllers
             return View(model);
         }
 
-        [Route("festivals/{id}/{naam}")]
-        [HttpPost]
-        public IActionResult Festivals(string id, string naam)
-        {
-            ViewData["id"] = id;
-            var model = GetFestival(id);
+        //[Route("festivals/{id}/{naam}")]
+        //[HttpPost]
+        //public IActionResult Festivals(string id, string naam)
+        //{
+        //    ViewData["id"] = id;
+        //    var model = GetFestival(id);
 
-            return View(model);
-        }
+        //    return View(model);
+        //}
 
-        private List<Festival> GetFestival(string id)
+        private Festival GetFestival(string id)
         {
-            List<Festival> festivals = new List<Festival>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand($"select * from festival", conn);
+                MySqlCommand cmd = new MySqlCommand($"select * from festival where id = {id}", conn);
 
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -145,11 +144,11 @@ namespace SchoolTemplate.Controllers
                             Img = reader["Img"].ToString(),
                             Prijs = Convert.ToDecimal(reader["Prijs"]),
                         };
-                        festivals.Add(p);
+                        return p;
                     }
                 }
             }
-            return festivals;
+            return null;
         }
 
 

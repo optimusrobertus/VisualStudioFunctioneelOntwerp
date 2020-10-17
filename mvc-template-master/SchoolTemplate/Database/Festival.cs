@@ -9,7 +9,9 @@ namespace SchoolTemplate.Database
     public string Naam { get; set; }
 
     public string Beschrijving{ get; set; }
-        
+
+    public string KorteBeschrijving() { return this.Beschrijving.Substring(0, this.Beschrijving.IndexOf(" ", 400)); }
+
     public string Img { get; set; }
         
     public DateTime Datum { get; set; }
