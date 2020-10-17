@@ -125,12 +125,11 @@ namespace SchoolTemplate.Controllers
 
         private Festival GetFestival(string id)
         {
-            List<Festival> festivals = new List<Festival>();
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
             {
                 conn.Open();
-                MySqlCommand cmd = new MySqlCommand($"select * from festival where id ={id}", conn);
+                MySqlCommand cmd = new MySqlCommand($"select * from festival where id = {id}", conn);
 
                 using (var reader = cmd.ExecuteReader())
                 {
@@ -145,11 +144,11 @@ namespace SchoolTemplate.Controllers
                             Img = reader["Img"].ToString(),
                             Prijs = Convert.ToDecimal(reader["Prijs"]),
                         };
-                        festivals.Add(p);
+                        return p;
                     }
                 }
             }
-            return festivals[0];
+            return null;
         }
 
 

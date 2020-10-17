@@ -18,7 +18,7 @@
     <h1 target="news">LATEST NEWS</h1>
     <div class="covid">
         <span class="closebutton" onclick="this.parentElement.style.display = 'none';">&times;</span>
-        <b>Take notice!</b> Because of the Covid-19 outbreak, some festivals have been delayed or permanently cancelled!
+        <b>Take notice!</b> Because of the Covid-19 outbreak, some festivals have been delayed or permanently cancelled!  
     </div>
 
     @foreach (Festival f in Model)
@@ -27,7 +27,7 @@
             <img class="festival-cover" src="@f.Img" />
             <div class="lcolumn">
                 <h2>@f.Naam</h2>
-                <p class="description">@f.Beschrijving</p>
+                <p class="description">@f.KorteBeschrijving() ...</p>
                 <a class="detailpage" href="festivals/@f.Id">Read more...</a>
             </div>
         </div>
