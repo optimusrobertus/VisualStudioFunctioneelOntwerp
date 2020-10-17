@@ -113,40 +113,40 @@ a[target="fest"] {
     max-width: 20%;
 }
 
-.festivals {
-    width: 10%;
-    margin: 0, 2%, 0, 2%;
-    display: flex;
-    flex-direction: row;
-}
-
-h3[target="Spring"] {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    background-image: url(/Sources/Img/springbreak.jpg);
-    padding: 10% 0 10% 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-}
-
-h3[target="summer"] {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    background-image: url(/Sources/Img/summerfest.jpg);
-    padding: 10% 0 10% 0;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 100%;
-}
-
-h3:hover {
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-}
 
 .button-news:hover {
     box-shadow: 4px 8px 6px rgba(0,0,0,0.3);
     text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+.festival-cover {
+    border-radius: 10%;
+    max-width: 200px;
+}
+
+h2 {
+    font-family: 'Fredoka One';
+    color: white;
+}
+
+.description {
+    white-space: nowrap;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.upcomingfestivals {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 20%;
+    border: 1px black;
+}
+
+.lcolumn {
+    flex: 40%;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
 }

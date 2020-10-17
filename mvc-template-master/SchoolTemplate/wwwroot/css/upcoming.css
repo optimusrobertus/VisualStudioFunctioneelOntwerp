@@ -1,16 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace SchoolTemplate.wwwroot.css
-{
-    public class upcoming
-    {
-    }
-}
-
-h1 {
+.title {
     font-family: 'Fredoka One';
     font-size: 300%;
     color: white;
@@ -21,37 +10,28 @@ h1 {
     align-items: center;
     padding: 3% 3% 0% 2%;
 }
-
-.card-body-header {
-    display: flex;
+/* The alert message box */
+.covid {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
 }
 
-.card-group > .card {
-    flex: 80%;
-    border-radius: 44px !important;
+/* The close button */
+.closebutton {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-.card {
-    border: 0 !important;
-    border-radius: 44px !important;
-    margin-right: 5%;
-    margin-bottom: 5% !important;
-    text-align: center;
-}
+    /* When moving the mouse over the close button */
+    .closebutton:hover {
+        color: black;
+    }
 
-.card-group {
-    margin-left: 5%;
-}
-
-.festival-cover {
-    width: 50%;
-    height: 50%;
-}
-
-.button {
-    color: black !important;
-}
-
-.card-text {
-    max-width: 200px;
-}

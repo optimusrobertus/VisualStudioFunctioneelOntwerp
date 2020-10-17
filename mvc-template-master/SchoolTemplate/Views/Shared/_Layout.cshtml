@@ -11,6 +11,7 @@
     @RenderSection("style", false)
     <title>Aggaveld</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -21,20 +22,64 @@
     <nav class="midnav">
         <div><a href="/">HOME</a></div>
         <div class="glitch"><img src="/Sources/Img/glitch.png"></div>
-        <div><a href="upcoming">UPCOMING</a></div>
-        <div class="glitch"><img src="/Sources/Img/glitch.png"></div>
         <div><a href="field">THE FIELD</a></div>
         <div class="glitch"><img src="/Sources/Img/glitch.png"></div>
         <div><a href="contact">CONTACT</a></div>
-
+        <div class="glitch"><img src="/Sources/Img/glitch.png"></div>
+        <div><a href="upcoming">UPCOMING</a></div>
     </nav>
 
     @RenderBody()
 
     <footer>
-        <div><a href="FAQ">FAQ</a></div>
-        <div><a href="festival">Line-up</a></div>
-        <div><a href="contact">Contact us</a></div>
+      <!-- Footer main -->
+      <section class="ft-main">
+        <div class="ft-main-item">
+          <h2 class="ft-title">The Field</h2>
+          <ul>
+            <li><a href="field#about">About Aggaveld</a></li>
+            <li><a href="field#aftermovies">Aftermovies</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+          <h2 class="ft-title">Contact</h2>
+          <ul>
+            <li><a href="contact">Contact us</a></li>
+            <li><a href="FAQ">Frequently asked questions</a></li>
+          </ul>
+        </div>
+        <div class="ft-main-item">
+            <h2 class="ft-title">About us</h2>
+            <ul>
+                <li>Location: <a href="https://goo.gl/maps/acmsRJquBFLPkJjP9" target="_blank">Malieveld, The Hague</a></li>
+                <li><a href="aboutus">Who are we?</a></li>
+            </ul>
+        </div>
+      </section>
+     
+      <!-- Footer social -->
+      <section class="ft-social">
+        <ul class="ft-social-list">
+            <li>
+                <a href="https://www.linkedin.com/in/robert-dilber/" class="fa fa-linkedin"></a>
+            </li>
+            <li>
+                <a href="https://www.facebook.com/robert.dilber.395" class="fa fa-facebook"></a>
+            </li>
+          <li
+              ><a href="https://twitter.com/userrobert101" class="fa fa-twitter"></a>
+            </li>
+          <li>
+              <a href="https://www.instagram.com/robert_dilber/" class="fa fa-instagram"></a>
+          </li>
+          <li>
+              <a href="https://www.youtube.com/channel/UC-iW9duBr8xKvBjIRkyRJ8w?view_as=subscriber" class="fa fa-youtube"></a>
+          </li>
+          <li>
+              <a href="https://www.reddit.com/user/OptimusRobertus" class="fa fa-reddit"></a>
+          </li>
+        </ul>
+      </section>
     </footer>
 </body>
 

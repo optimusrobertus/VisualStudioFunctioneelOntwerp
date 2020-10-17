@@ -54,12 +54,6 @@ namespace SchoolTemplate.Controllers
             return festivals;
         }
 
-        [Route("upcoming")]
-        public IActionResult upcoming()
-        {
-            return View();
-        }
-
         [Route("contact")]
         public IActionResult contact()
         {
@@ -98,10 +92,32 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
+        [Route("aboutus")]
+        public IActionResult aboutus()
+        {
+            return View();
+        }
 
-        [Route("festivals/{id}")]
+        [Route("upcoming")]
+        public IActionResult upcoming()
+        {
+            return View(GetFestivals());
+        }
+
+
+        [Route("festivals/{id}/{naam}")]
         public IActionResult Festivals(string id)
         {
+            var model = GetFestival(id);
+
+            return View(model);
+        }
+
+        [Route("festivals/{id}/{naam}")]
+        [HttpPost]
+        public IActionResult Festivals(string id, string naam)
+        {
+            ViewData["id"] = id;
             var model = GetFestival(id);
 
             return View(model);

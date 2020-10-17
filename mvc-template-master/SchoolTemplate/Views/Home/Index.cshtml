@@ -1,4 +1,5 @@
-﻿@using SchoolTemplate.Database;
+﻿
+@using SchoolTemplate.Database;
 @model List<Festival>
 @{ ViewData["Title"] = "Home Page"; }
 
@@ -22,13 +23,14 @@
 
     @foreach (Festival f in Model)
     {
-        <p>@f.Naam</p>
-        <img class="bg" src="@f.Img" />
+        <div class="upcomingfestivals">
+            <img class="festival-cover" src="@f.Img" />
+            <div class="lcolumn">
+                <h2>@f.Naam</h2>
+                <p class="description">@f.Beschrijving</p>
+                <a class="detailpage" href="festivals/@f.Id/@f.Naam">Read more...</a>
+            </div>
+        </div>
+        <br />
     }
-
-    <a target="fest" href="#">
-        <h3 target="Spring">Springbreak festival</h3>
-        <h3 target="summer">Summer festival</h3>
-    </a>
-    <a href="festival" class="button-news" target="more-news">More festivals</a>
 </div> 

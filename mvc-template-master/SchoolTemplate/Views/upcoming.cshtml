@@ -1,12 +1,10 @@
 ﻿@model IEnumerable<SchoolTemplate.Database.Festival>
 @{ ViewData["Title"] = "Festival"; }
-
 @section style{
     <link href="/css/upcoming.css" type="text/css" rel="stylesheet" />
 }
 
-<h1>Upcoming events</h1>
-
+<h1 class="Title">Upcoming events</h1>
 
 <div class="news">
     <div class="covid">
@@ -15,13 +13,10 @@
     </div>
 
     @*@foreach (Festival f in Model)
-    {
         <div class="rcolumn"><img class="festival-cover" src="@f.Img" /></div>
-        <div class="lcolumn">
-            <h2>@f.Naam</h2>
-            <p>@f.Beschrijving</p>
-        </div>
+    <div class="lcolumn">
+        <h2>@f.Naam</h2>
+        <p>@f.Beschrijving</p>
+    </div>
     }*@
 </div>
-
-
