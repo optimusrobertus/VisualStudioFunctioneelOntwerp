@@ -57,3 +57,8 @@
     color: #404040;
     margin: 0px;
 }
+
+.question p {
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}

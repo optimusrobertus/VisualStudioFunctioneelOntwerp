@@ -1,5 +1,58 @@
 ﻿@model SchoolTemplate.Database.Festival
 @{ ViewData["Title"] = "Festival"; }
+
+@section style{
+    <link href="/css/festivals.css" type="text/css" rel="stylesheet" />
+}
+
 <h1>@Model.Naam</h1>
 
-<p>@Model.Beschrijving</p> 
+@*<div class="main">
+    <div class="row">
+        <div class="column">
+            <img class="logo" src="@Model.Img" />
+        </div>
+        <div class="column">
+            <div>
+                <h3>Date:</h3>
+                <p> @Model.Datum</p>
+            </div>
+            <div>
+                <h3>Price:</h3>
+                <p> €@Model.Prijs </p>
+            </div>
+            <div>
+                <h3>About:</h3>
+                <p> @Model.Beschrijving</p>
+            </div>
+            <div class="ticket">
+                <p style="font-size:115%;"><b>Will you be there?</b></p><br />
+                <button type="button">Buy tickets</button>
+            </div>
+        </div>
+    </div>
+</div>
+<br /><br />*@
+
+
+<div class="flexbox">
+    <div class="left"><img class="logo" src="@Model.Img" /></div>
+    <div class="right">
+        <div>
+            <h3>Date:</h3>
+            <p> @Model.Datum</p> <br /> <br />
+        </div>
+        <div>
+            <h3>Price:</h3>
+            <p> €@Model.Prijs </p> <br /> <br />
+        </div>
+        <div>
+            <h3>About:</h3>
+            <p> @Model.Beschrijving</p> <br /> <br />
+        </div>
+        <div class="ticket">
+            <p style="font-size:115%;"><b>Will you be there?</b></p><br /><br />
+            <button type="button">Buy tickets</button>
+        </div>
+    </div>
+</div>

@@ -129,13 +129,6 @@ h2 {
     color: white;
 }
 
-/*.description {
-    white-space: nowrap;
-    max-width: 200px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}*/
-
 .upcomingfestivals {
     display: flex;
     flex-wrap: wrap;

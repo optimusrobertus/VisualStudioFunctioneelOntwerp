@@ -98,13 +98,6 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-        [Route("upcoming")]
-        public IActionResult upcoming()
-        {
-            return View(GetFestivals());
-        }
-
-
         [Route("festivals/{id}")]
         public IActionResult Festivals(string id)
         {
@@ -112,16 +105,6 @@ namespace SchoolTemplate.Controllers
 
             return View(model);
         }
-
-        //[Route("festivals/{id}/{naam}")]
-        //[HttpPost]
-        //public IActionResult Festivals(string id, string naam)
-        //{
-        //    ViewData["id"] = id;
-        //    var model = GetFestival(id);
-
-        //    return View(model);
-        //}
 
         private Festival GetFestival(string id)
         {
