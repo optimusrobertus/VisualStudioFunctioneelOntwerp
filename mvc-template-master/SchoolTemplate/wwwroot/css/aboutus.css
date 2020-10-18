@@ -1,12 +1,76 @@
-﻿body, html{
-    width: 80%;
-}
-
-h1 {
+﻿h1 {
     font-family: 'Fredoka One';
     font-size: 300%;
     padding: 3% 3% 0% 2%;
     text-align: center;
     text-decoration: overline;
     color: white;
+}
+
+h2 {
+    font-family: 'Fredoka One';
+    color: white;
+}
+
+h4 {
+    font-family: 'Fredoka One';
+    color: lightgray;
+}
+
+.abouttext {
+    width: 80%;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+}
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    align-content: space-between;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    margin: auto;
+}
+
+    .flexbox > div {
+        text-align: center;
+        padding: 20px 0;
+        margin: 5px;
+    }
+
+
+
+@media(min-width:375px) {
+    .flexbox {
+        flex-flow: row wrap;
+    }
+
+        .flexbox > .left {
+            order: 1;
+            flex: 0.5;
+        }
+
+        .flexbox > .right {
+            order: 2;
+            flex: 0.5;
+        }
+
+
+}
+
+.developerpic img{
+    border-radius: 50%;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.developertext a {
+    color: white;
+    font-family: 'Fredoka One';
 }

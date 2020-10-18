@@ -21,8 +21,8 @@ h3 {
     border-radius: 10%;
     max-width: 70%;
     max-height: 70%;
-    align-self: flex-start;
-} 
+/*    align-self: flex-start;
+*/} 
 
 p, h3 {
     display: inline;
@@ -61,6 +61,7 @@ button {
     width: 80%;
     align-items: center;
     margin: auto;
+
 }
 
     .flexbox > div {
@@ -69,9 +70,9 @@ button {
         margin: 5px;
     }
 
-    
 
-@media(min-width:700px) {
+
+@media(min-width:1000px) {
     .flexbox {
         flex-flow: row wrap;
     }
@@ -85,3 +86,4 @@ button {
             order: 2;
             flex: 0.5;
         }
+}
