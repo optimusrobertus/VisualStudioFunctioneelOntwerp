@@ -89,12 +89,13 @@ nav { /*navbar itself*/
         }
 
      }
-       
+
 a { /*footer styling*/
     opacity: 1;
     color: #ee1960;
     text-decoration: none;
     transition: all 300ms ease;
+
 }
 
 

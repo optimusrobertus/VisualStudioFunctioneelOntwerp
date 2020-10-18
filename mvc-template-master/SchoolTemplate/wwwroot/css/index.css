@@ -41,7 +41,7 @@
 
 
 .news {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Fredoka one';
     color: white;
     padding: 0 5% 2% 5%;
     display: flex;
@@ -125,10 +125,7 @@ a[target="fest"] {
     left: 184px;
 }
 
-/*.header img{
-    float: left;
-}
-*/
+
 .festival-cover {
     border-radius: 10%;
     width: 170px;
@@ -140,17 +137,23 @@ h2 {
     color: white;
 }
 
-.lcolumn > div > h3{
-    top: -141px;
-    left: 184px;
+.databaseinfo {
+    top: -22px;
+    left: 235px;
     position: relative;
 }
 
+.detailpage {
+    padding: 0% 0% 0% 4%;
+    top: -17px;
+    position: relative;
+    color: yellow;
+}
+
 .description {
-/*    white-space: nowrap;*/
-/*    max-width: 200px;*/
     overflow: hidden;
     text-overflow: ellipsis;
+    padding: 1% 5% 2% 4%;
 }
 
 .upcomingfestivals {
@@ -161,9 +164,35 @@ h2 {
     border: 1px black;
 }
 
+.header {
+    margin: 0% 0% -9% 4%;
+}
+
+
 .lcolumn {
-    flex: 40%;
+    flex-grow: 1;
     justify-content: center;
     align-content: center;
     align-items: center;
+    border-radius: 44Px;
+    background-color: #e043a5db;
+}
+
+@media screen and (max-width:375px) {
+    .header {
+        text-align: center;
+    }
+
+    .header h2 {
+        position: unset;
+    }
+
+    .databaseinfo {
+        top: 20px;
+        left: 104px;
+    }
+
+    .description {
+        padding: 8% 5% 2% 4%;
+    }
 }
