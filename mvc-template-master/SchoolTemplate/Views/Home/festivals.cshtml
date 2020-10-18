@@ -11,19 +11,17 @@
     <div class="left"><img class="logo" src="@Model.Img" /></div>
     <div class="right">
         <div>
-            <h3>Date:</h3>
-            <p> @Model.Datum</p> <br /> <br />
+            <h3>Date: @Model.Datum</h3>
+            <h3>Time: @Model.Tijd</h3>
+            <h3>Age: @Model.Minimumleeftijd</h3>
+            <h3>Price: €@Model.Prijs</h3>
+            <h3>Line-up:</h3>
+            <p>@Model.Artiesten</p>
         </div>
-        <div>
-            <h3>Price:</h3>
-            <p> €@Model.Prijs </p> <br /> <br />
-        </div>
-        <div>
             <h3>About:</h3>
             <p> @Model.Beschrijving</p> <br /> <br />
-        </div>
         <div class="ticket">
-            <p style="font-size:115%;"><b>Will you be there?</b></p><br /><br />
+            <p style="font-size:115%;"><b>Will you be there?</b></p>
             <button type="button">Buy tickets</button>
         </div>
     </div>

@@ -20,6 +20,8 @@ namespace SchoolTemplate.Database
 
     public Decimal Prijs {   get; set; }
 
+    public string Artiesten { get; set; }
+
     public string Minimumleeftijd { get; set; }
     /// <summary>
     /// Gebruik altijd decimal voor geldzaken. Dit doe je om te voorkomen dat er afrondingsfouten optreden
