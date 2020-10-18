@@ -8,7 +8,7 @@
     margin: 4% 0% 0 0%;
 }
 
-.introduction {
+.introduction { /*setting image as background*/
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/Sources/Img/maxresdefault.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -58,7 +58,7 @@
     text-decoration: overline;
 }
 
-/* The alert message box */
+/*alert message box*/
 .covid {
     padding: 20px;
     background-color: #f44336; /* Red */
@@ -66,7 +66,7 @@
     margin-bottom: 15px;
 }
 
-/* The close button */
+/*close button for alert message box*/
 .closebutton {
     margin-left: 15px;
     color: white;
@@ -78,46 +78,10 @@
     transition: 0.3s;
 }
 
-    /* When moving the mouse over the close button */
+    /*moving mouse over close button*/
     .closebutton:hover {
         color: black;
     }
-
-a[target="more-news"] {
-    opacity: 1;
-    padding: 0.8% 2% 0.8% 2%;
-    color: white;
-    text-decoration: none;
-    transition: all 300ms ease;
-}
-
-a[target="fest"] {
-    opacity: 1;
-    padding: 0.8% 2% 0.8% 2%;
-    color: white;
-    text-decoration: none;
-    transition: all 300ms ease;
-    width: 100%;
-}
-
-.button-news {
-    background-color: #e579ed;
-    border: none;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 100%;
-    border-radius: 5%;
-    box-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-    max-width: 20%;
-}
-
-
-.button-news:hover {
-    box-shadow: 4px 8px 6px rgba(0,0,0,0.3);
-    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-}
 
 .festival-cover {
     border-radius: 10%;

@@ -15,7 +15,7 @@
     margin: auto;
 }
 
-.accordion {
+.accordion { /*to style foldable/accordion faq section*/
     background-color: #eee;
     color: #444;
     cursor: pointer;

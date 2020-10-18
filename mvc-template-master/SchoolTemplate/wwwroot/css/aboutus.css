@@ -27,7 +27,8 @@ h4 {
     margin: auto;
     text-align: center;
 }
-.flexbox {
+
+.flexbox { /*to display 2 columns containing info next to eacht other*/
     display: flex;
     flex-direction: column;
     padding: 5px;
@@ -46,7 +47,7 @@ h4 {
 
 
 
-@media(min-width:375px) {
+@media(min-width:1000px) { /*to make the colums responsive*/
     .flexbox {
         flex-flow: row wrap;
     }

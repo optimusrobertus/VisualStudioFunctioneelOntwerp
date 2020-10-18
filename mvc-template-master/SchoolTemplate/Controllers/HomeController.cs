@@ -16,16 +16,14 @@ namespace SchoolTemplate.Controllers
         //string connectionString = "Server=172.16.160.21;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;"; //voor school
         string connectionString = "Server=informatica.st-maartenscollege.nl;Port=3306;Database=110041;Uid=110041;Pwd=MEdenkgR;"; //voor thuis
 
-
-        // [Route("Index")]
-        public IActionResult Index()
+        public IActionResult Index() //connecting database to index page, to show festivals from database
         {
             List<Festival> festivals = new List<Festival>();
             festivals = GetFestivals();
 
             return View(festivals);
         }
-        private List<Festival> GetFestivals()
+        private List<Festival> GetFestivals() //function for getting festivals from database
         {
             List<Festival> festivals = new List<Festival>();
 
@@ -60,7 +58,7 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-        [Route("contact")]
+        [Route("contact")] //redirect to page after filling in contact form
         [HttpPost]
         public IActionResult contact(PersonModel model)
         {
@@ -74,7 +72,22 @@ namespace SchoolTemplate.Controllers
             return Redirect("/succes");
         }
 
-        [Route("succes")]
+        private void SavePerson(PersonModel person) //function to upload contact form data to database
+        {
+            using (MySqlConnection conn = new MySqlConnection(connectionString))
+            {
+                conn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO customer(firstname, lastname, phonenumber, email, subject) VALUES(?firstname, ?lastname, ?phonenumber, ?email, ?subject)", conn);
+                cmd.Parameters.Add("?firstname", MySqlDbType.VarChar).Value = person.firstname;
+                cmd.Parameters.Add("?lastname", MySqlDbType.VarChar).Value = person.lastname;
+                cmd.Parameters.Add("?phonenumber", MySqlDbType.VarChar).Value = person.phonenumber;
+                cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = person.email;
+                cmd.Parameters.Add("?subject", MySqlDbType.VarChar).Value = person.subject;
+                cmd.ExecuteNonQuery();
+            }
+        }
+
+        [Route("succes")] //page after filling in contact form
         public IActionResult succes()
         {
             return View();
@@ -98,7 +111,7 @@ namespace SchoolTemplate.Controllers
             return View();
         }
 
-        [Route("festivals/{id}")]
+        [Route("festivals/{id}")] //route for festival detail pages
         public IActionResult Festivals(string id)
         {
             var model = GetFestival(id);
@@ -106,7 +119,7 @@ namespace SchoolTemplate.Controllers
             return View(model);
         }
 
-        private Festival GetFestival(string id)
+        private Festival GetFestival(string id) //function for getting specific festival information from database, to show on festival detail page
         {
 
             using (MySqlConnection conn = new MySqlConnection(connectionString))
@@ -133,24 +146,6 @@ namespace SchoolTemplate.Controllers
             }
             return null;
         }
-
-
-
-        private void SavePerson(PersonModel person)
-        {
-            using(MySqlConnection conn= new MySqlConnection(connectionString))
-            {
-                conn.Open();
-                MySqlCommand cmd = new MySqlCommand("INSERT INTO customer(firstname, lastname, phonenumber, email, subject) VALUES(?firstname, ?lastname, ?phonenumber, ?email, ?subject)", conn);
-                cmd.Parameters.Add("?firstname", MySqlDbType.VarChar).Value = person.firstname;
-                cmd.Parameters.Add("?lastname", MySqlDbType.VarChar).Value = person.lastname;
-                cmd.Parameters.Add("?phonenumber", MySqlDbType.VarChar).Value = person.phonenumber;
-                cmd.Parameters.Add("?email", MySqlDbType.VarChar).Value = person.email;
-                cmd.Parameters.Add("?subject", MySqlDbType.VarChar).Value = person.subject;
-                cmd.ExecuteNonQuery();
-            }   
-        }
-
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
