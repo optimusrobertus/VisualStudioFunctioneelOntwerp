@@ -24,9 +24,16 @@
     @foreach (Festival f in Model)
     {
         <div class="upcomingfestivals">
-            <img class="festival-cover" src="@f.Img" />
             <div class="lcolumn">
-                <h2>@f.Naam</h2>
+                <div class= "header" >
+                    <h2>@f.Naam</h2>
+                    <img class="festival-cover" src="@f.Img" />
+                </div>  
+                <div>   
+                    <h3> <u>Date:</u> @f.Datum</h3>
+                    <h3> <u>Time:</u> @f.Tijd  </h3>
+                    <h3> <u>Age:</u> @f.Minimumleeftijd </h3>
+                </div>
                 <p class="description">@f.KorteBeschrijving() ...</p>
                 <a class="detailpage" href="festivals/@f.Id">Read more...</a>
             </div>

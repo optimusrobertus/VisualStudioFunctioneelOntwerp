@@ -43,9 +43,12 @@ namespace SchoolTemplate.Controllers
                             Id = Convert.ToInt32(reader["ID"]),
                             Naam = reader["naam"].ToString(),
                             Beschrijving = reader["beschrijving"].ToString(),
-                            Datum = DateTime.Parse(reader["datum"].ToString()),
+                            Datum = reader["datum"].ToString(),
+                            Tijd = reader["tijd"].ToString(),
                             Img = reader["Img"].ToString(),
                             Prijs = Convert.ToDecimal(reader["Prijs"]),
+
+                            Minimumleeftijd = reader["minimumleeftijd"].ToString(),
                         };
                         festivals.Add(p);
                     }
@@ -113,16 +116,6 @@ namespace SchoolTemplate.Controllers
             return View(model);
         }
 
-        //[Route("festivals/{id}/{naam}")]
-        //[HttpPost]
-        //public IActionResult Festivals(string id, string naam)
-        //{
-        //    ViewData["id"] = id;
-        //    var model = GetFestival(id);
-
-        //    return View(model);
-        //}
-
         private Festival GetFestival(string id)
         {
 
@@ -140,9 +133,12 @@ namespace SchoolTemplate.Controllers
                             Id = Convert.ToInt32(reader["ID"]),
                             Naam = reader["naam"].ToString(),
                             Beschrijving = reader["beschrijving"].ToString(),
-                            Datum = DateTime.Parse(reader["datum"].ToString()),
+                            Datum = reader["datum"].ToString(),
+                            Tijd = reader["tijd"].ToString(),
                             Img = reader["Img"].ToString(),
                             Prijs = Convert.ToDecimal(reader["Prijs"]),
+
+                            Minimumleeftijd = reader["minimumleeftijd"].ToString(),
                         };
                         return p;
                     }
