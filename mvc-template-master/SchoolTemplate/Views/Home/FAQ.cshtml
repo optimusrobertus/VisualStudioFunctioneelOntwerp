@@ -1,51 +1,39 @@
-﻿@using SchoolTemplate.Database;
-@model List<Festival>
-@{ ViewData["Title"] = "Frequently Asked Questions"; }
+﻿@{ ViewData["Title"] = "Frequently Asked Questions"; }
 
 @section style{
     <link href="/css/FAQ.css" type="text/css" rel="stylesheet" />
 }
 
 <h1>Frequently Asked Questions:</h1>
-<div class="questions">
+<div class="questions"> @*accordion type expandable FAQ*@
     <button class="accordion"><span>Can I refund my ticket?</span></button>
     <div class="panel">
-        <p>.</p>
+        <p>Yes, it is possible to refund your ticket. In order to do so, please <a href="contact">contact us</a>.</p>
     </div>
 
     <button class="accordion"><span>Where can I buy my tickets?</span></button>
     <div class="panel">
-        <p>.</p>
+        <p>You can buy your tickets, by visiting a page with the details of one of the festivals featured at our festival site. At the bottom, there's a button witht the text: "Buy tickets". By clicking on this button, you'll be able to buy tickets!</p>
     </div>
 
     <button class="accordion"><span>Where can I sign up as an artist?</span></button>
     <div class="panel">
-        <p>.</p>
-    </div>
-
-    <button class="accordion"><span>Are lockers available on the field?</span></button>
-    <div class="panel">
-        <p>.</p>
+        <p>To sign up as an artist, you have to contact the festival itself. We can, however, help you wist that. Just <a href="contact">contact us</a>.</p>
     </div>
 
     <button class="accordion"><span>Is there a First Aid service?</span></button>
     <div class="panel">
-        <p>.</p>
+        <p>At every festival, we have at least 10 First Aids huts available. They're marked with big red crosses.</p>
     </div>
 
     <button class="accordion"><span>Is there a parking lot?</span></button>
     <div class="panel">
-        <p>.</p>
-    </div>
-
-    <button class="accordion"><span>Can I recommend artists?</span></button>
-    <div class="panel">
-        <p>.</p>
+        <p>Yes, we (conveniently) have our own parking lot, right beneath the festival field: <a href="https://g.page/apcoa-malieveld?share"">Aggaveld parking lot</a>.</p>
     </div>
 
     <button class="accordion"><span>Is there a lost and found service?</span></button>
     <div class="panel">
-        <p>Yes, there is. It is located</p>
+        <p>Yes, there is. It is located at the main entrance.</p>
     </div>
     <br /><br /><br /><br />
 </div>

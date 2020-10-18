@@ -1,5 +1,4 @@
-﻿
-@using SchoolTemplate.Database;
+﻿@using SchoolTemplate.Database;
 @model List<Festival>
 @{ ViewData["Title"] = "Home Page"; }
 
@@ -17,10 +16,12 @@
 <div class="news">
     <h1 target="news">LATEST NEWS</h1>
     <div class="covid">
+        @*alert message box*@
         <span class="closebutton" onclick="this.parentElement.style.display = 'none';">&times;</span>
-        <b>Take notice!</b> Because of the Covid-19 outbreak, some festivals have been delayed or permanently cancelled!  
+        <b>Take notice!</b> Because of the Covid-19 outbreak, some festivals have been delayed or permanently cancelled!
     </div>
 
+    @*display festival information from database*@
     @foreach (Festival f in Model)
     {
         <div class="upcomingfestivals">

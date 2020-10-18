@@ -7,28 +7,52 @@
     color: white;
 }
 
-h2 {
+h3 {
     font-family: 'Fredoka One';
     color: white;
 }
 
-h4 {
-    font-family: 'Fredoka One';
-    color: lightgray;
-}
-
-.abouttext {
-    width: 80%;
-    color: white;
+.flexbox p {
     font-family: 'Roboto', sans-serif;
-    display: flex;
+    color: white;
+}
+
+.logo {
+    border-radius: 10%;
+    max-width: 70%;
+    max-height: 70%;
+/*    align-self: flex-start;
+*/} 
+
+p, h3 {
+    display: inline;
+}
+
+.ticket {
     align-content: center;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin: auto;
     text-align: center;
 }
 
-.flexbox { /*to display 2 columns containing info next to eacht other*/
+button {
+    background-color: #e579ed;
+    border-radius: 10%;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    display: inline-block;
+    color: white;
+    padding: 15px 32px;
+    font-size: 110%;
+}
+
+    button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+.flexbox { /*to display 2 columns next to eachter (image left, text right)*/
     display: flex;
     flex-direction: column;
     padding: 5px;
@@ -37,6 +61,7 @@ h4 {
     width: 80%;
     align-items: center;
     margin: auto;
+
 }
 
     .flexbox > div {
@@ -47,7 +72,7 @@ h4 {
 
 
 
-@media(min-width:1000px) { /*to make the colums responsive*/
+@media(min-width:1000px) { /*make columns responsive*/
     .flexbox {
         flex-flow: row wrap;
     }
@@ -61,17 +86,4 @@ h4 {
             order: 2;
             flex: 0.5;
         }
-
-
-}
-
-.developerpic img{
-    border-radius: 50%;
-    max-height: 100%;
-    max-width: 100%;
-}
-
-.developertext a {
-    color: white;
-    font-family: 'Fredoka One';
 }

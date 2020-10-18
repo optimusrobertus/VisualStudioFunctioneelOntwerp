@@ -9,7 +9,7 @@
     background-repeat: no-repeat;
 }
 
-.topnav {
+.topnav { /*top part of navbar*/
     min-width: 100%;
     display: flex;
     flex-direction: row;
@@ -45,7 +45,7 @@ img[target="topnav"] {
     align-self: center;
 }
 
-nav {
+nav { /*navbar itself*/
     background-color: #f5daf7;
     font-family: 'Fredoka One';
     display: flex;
@@ -68,7 +68,7 @@ nav {
         font-size: 200%;
     }
 
-     @media screen and (max-width: 375px ) {
+     @media screen and (max-width: 375px ) { /*responsive navbar*/
         .glitch {
             display: none;
         }
@@ -83,14 +83,14 @@ nav {
 
     }
 
-     @media screen and (min-width: 376px) {
+     @media screen and (min-width: 376px) { /*responsive navbar*/
         .nav {
             margin: -1% -1% -1% -1%;
         }
 
      }
        
-a {
+a { /*footer styling*/
     opacity: 1;
     color: #ee1960;
     text-decoration: none;
@@ -151,13 +151,13 @@ a:hover {
     font-family: 'roboto', sans-serif;
     color: white;
 }
-@media only screen and (min-width: 29.8125rem /*477px*/ ) {
+@media only screen and (min-width: 29.8125rem /*477px*/ ) { /*footer responsive*/
     .ft-main {
         justify-content: space-around;
     }
 }
 
-@media only screen and (min-width: 77.5rem /*1240px*/ ) {
+@media only screen and (min-width: 77.5rem /*1240px*/ ) { /*footer responsive*/
     .ft-main {
         justify-content: space-evenly;
     }
