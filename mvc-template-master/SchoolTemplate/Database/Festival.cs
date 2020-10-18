@@ -20,7 +20,7 @@ namespace SchoolTemplate.Database
 
     public Decimal Prijs {   get; set; }
 
-
+    public string Artiesten { get; set; }
 
     public string Minimumleeftijd { get; set; }
     /// <summary>

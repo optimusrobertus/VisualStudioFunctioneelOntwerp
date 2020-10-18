@@ -47,7 +47,7 @@ namespace SchoolTemplate.Controllers
                             Tijd = reader["tijd"].ToString(),
                             Img = reader["Img"].ToString(),
                             Prijs = Convert.ToDecimal(reader["Prijs"]),
-
+                            Artiesten = reader["artiesten"].ToString(),
                             Minimumleeftijd = reader["minimumleeftijd"].ToString(),
                         };
                         festivals.Add(p);
@@ -137,7 +137,7 @@ namespace SchoolTemplate.Controllers
                             Tijd = reader["tijd"].ToString(),
                             Img = reader["Img"].ToString(),
                             Prijs = Convert.ToDecimal(reader["Prijs"]),
-
+                            Artiesten = reader["artiesten"].ToString(),
                             Minimumleeftijd = reader["minimumleeftijd"].ToString(),
                         };
                         return p;
